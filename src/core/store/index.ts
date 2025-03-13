@@ -4,8 +4,10 @@ import { type Message } from "../messaging";
 
 export const useStore = create<{
   messages: Message[];
+  responding: boolean;
 }>(() => ({
   messages: [],
+  responding: false,
 }));
 
 export function addMessage(message: Message) {
@@ -30,4 +32,8 @@ export function updateSSEMessage(id: string, text: string) {
 
 export function clearMessages() {
   useStore.setState({ messages: [] });
+}
+
+export function setResponding(responding: boolean) {
+  useStore.setState({ responding });
 }

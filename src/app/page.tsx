@@ -11,6 +11,7 @@ import { MessageHistoryView } from "./_components/MessageHistoryView";
 
 export default function HomePage() {
   const messages = useStore((state) => state.messages);
+  const responding = useStore((state) => state.responding);
   const handleSendMessage = useCallback((message: string) => {
     addMessage({
       id: nanoid(),
@@ -25,7 +26,7 @@ export default function HomePage() {
         <AppHeader />
       </header>
       <main className="mb-48 mt-16 px-4">
-        <MessageHistoryView messages={messages} ongoing />
+        <MessageHistoryView messages={messages} loading={responding} />
       </main>
       <footer className="fixed bottom-4 flex w-[784px] flex-col overflow-hidden rounded-[24px] border bg-white shadow">
         <InputBox onSend={handleSendMessage} />

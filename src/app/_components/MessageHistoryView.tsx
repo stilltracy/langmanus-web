@@ -3,20 +3,23 @@ import Markdown from "react-markdown";
 import { type Message } from "~/core/messaging";
 import { cn } from "~/core/utils/classnames";
 
+import { LoadingAnimation } from "./LoadingAnimation";
+
 export function MessageHistoryView({
   className,
   messages,
-  ongoing,
+  loading,
 }: {
   className?: string;
   messages: Message[];
-  ongoing?: boolean;
+  loading?: boolean;
 }) {
   return (
     <div className={cn(className)}>
       {messages.map((message) => (
         <MessageView key={message.id} message={message} />
       ))}
+      {loading && <LoadingAnimation />}
     </div>
   );
 }

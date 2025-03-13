@@ -10,6 +10,7 @@ export function InputBox({
   onSend?: (message: string) => void;
 }) {
   const [message, setMessage] = useState("");
+  const [imeStatus, setImeStatus] = useState<"active" | "inactive">("inactive");
   const sendMessage = useCallback(() => {
     if (message.trim() === "") {
       return;
@@ -25,13 +26,14 @@ export function InputBox({
         event.key === "Enter" &&
         !event.shiftKey &&
         !event.metaKey &&
-        !event.ctrlKey
+        !event.ctrlKey &&
+        imeStatus === "inactive"
       ) {
         event.preventDefault();
         sendMessage();
       }
     },
-    [sendMessage],
+    [sendMessage, imeStatus],
   );
   return (
     <div className={cn(className)}>
@@ -39,6 +41,8 @@ export function InputBox({
         className="m-0 min-h-4 w-full resize-none border-none px-4 py-3 text-lg"
         placeholder="What can I do for you?"
         value={message}
+        onCompositionStart={() => setImeStatus("active")}
+        onCompositionEnd={() => setImeStatus("inactive")}
         onKeyDown={handleKeyDown}
         onChange={(event) => {
           setMessage(event.target.value);

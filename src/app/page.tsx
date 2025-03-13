@@ -27,7 +27,7 @@ export default function HomePage() {
       <main className="mb-48 mt-16 px-4">
         <MessageHistoryView messages={messages} ongoing />
       </main>
-      <footer className="fixed bottom-4 flex w-[784px] flex-col overflow-hidden rounded-[24px] border bg-white">
+      <footer className="fixed bottom-4 flex w-[784px] flex-col overflow-hidden rounded-[24px] border bg-white shadow">
         <InputBox onSend={handleSendMessage} />
       </footer>
     </main>

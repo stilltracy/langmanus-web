@@ -6,3 +6,13 @@ input,
 textarea {
   outline: none;
 }
+
+.markdown {
+  a {
+    color: blue;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}

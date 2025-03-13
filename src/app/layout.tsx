@@ -1,7 +1,7 @@
-import "~/styles/globals.css";
-
 import { GeistSans } from "geist/font/sans";
 import { type Metadata } from "next";
+
+import "~/styles/globals.css";
 
 export const metadata: Metadata = {
   title: "LangManus",
@@ -15,7 +15,7 @@ export default function RootLayout({
 }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en" className={`${GeistSans.variable}`}>
-      <body className="min-w-screen flex min-h-screen items-center justify-center bg-[#f9f8f6]">
+      <body className="min-w-screen flex min-h-screen items-center justify-center bg-[#f8f7f5]">
         {children}
       </body>
     </html>

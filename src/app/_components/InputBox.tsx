@@ -1,8 +1,19 @@
 import { type KeyboardEvent, useCallback, useState } from "react";
 
-export function InputBox({ onSend }: { onSend?: (message: string) => void }) {
+import { cn } from "~/core/utils/classnames";
+
+export function InputBox({
+  className,
+  onSend,
+}: {
+  className?: string;
+  onSend?: (message: string) => void;
+}) {
   const [message, setMessage] = useState("");
   const sendMessage = useCallback(() => {
+    if (message.trim() === "") {
+      return;
+    }
     if (onSend) {
       onSend(message);
       setMessage("");
@@ -23,10 +34,10 @@ export function InputBox({ onSend }: { onSend?: (message: string) => void }) {
     [sendMessage],
   );
   return (
-    <div>
+    <div className={cn(className)}>
       <textarea
-        className="m-0 min-h-4 w-full resize-none border-none p-4 text-lg"
-        placeholder="How can LangManus assist you?"
+        className="m-0 min-h-4 w-full resize-none border-none px-4 py-3 text-lg"
+        placeholder="What can I do for you?"
         value={message}
         onKeyDown={handleKeyDown}
         onChange={(event) => {

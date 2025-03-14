@@ -5,6 +5,17 @@
 import "./src/env.js";
 
 /** @type {import("next").NextConfig} */
-const config = {};
+const config = {
+  experimental: {
+    turbo: {
+      rules: {
+        "*.txt": {
+          loaders: ["raw-loader"],
+          as: "*.js",
+        },
+      },
+    },
+  },
+};
 
 export default config;

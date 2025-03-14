@@ -21,16 +21,18 @@ export default function HomePage() {
     });
   }, []);
   return (
-    <main className="min-w-page min-h-screen">
-      <header className="fixed left-0 right-0 top-0 flex h-16 w-full items-center px-4">
-        <AppHeader />
-      </header>
-      <main className="mb-48 mt-16 px-4">
-        <MessageHistoryView messages={messages} loading={responding} />
-      </main>
-      <footer className="w-page fixed bottom-4 flex flex-col overflow-hidden rounded-[24px] border bg-white shadow">
-        <InputBox onSend={handleSendMessage} />
-      </footer>
-    </main>
+    <div className="flex w-full flex-col items-center justify-center">
+      <div className="min-w-page min-h-screen">
+        <header className="fixed left-0 right-0 top-0 flex h-16 w-full items-center px-4">
+          <AppHeader />
+        </header>
+        <main className="mb-48 mt-16 px-4">
+          <MessageHistoryView messages={messages} loading={responding} />
+        </main>
+        <footer className="w-page fixed bottom-4 flex flex-col overflow-hidden rounded-[24px] border bg-white shadow">
+          <InputBox onSend={handleSendMessage} />
+        </footer>
+      </div>
+    </div>
   );
 }

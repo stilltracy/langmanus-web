@@ -1,18 +1,20 @@
 import { type Config } from "tailwindcss";
 import { fontFamily } from "tailwindcss/defaultTheme";
 
+export const PAGE_WIDTH = 960;
+
 export default {
   content: ["./src/**/*.tsx"],
   theme: {
     extend: {
       width: {
-        page: "960px",
+        page: `${PAGE_WIDTH}px`,
       },
       minWidth: {
-        page: "960px",
+        page: `${PAGE_WIDTH}px`,
       },
       maxWidth: {
-        page: "960px",
+        page: `${PAGE_WIDTH}px`,
       },
       colors: {
         primary: "#1D4ED8",

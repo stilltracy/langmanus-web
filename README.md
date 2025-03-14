@@ -22,6 +22,18 @@ LangManus is a community-driven AI automation framework that builds upon the inc
 - Node.js (v22.14.0+)
 - pnpm (v10.6.2+) as package manager
 
+### Configuration
+
+Create a `.env` file in the project root and configure the following environment variables:
+
+- `NEXT_PUBLIC_API_URL`: The URL of the LangManus API.
+
+It's always a good idea to start with the given example file, and edit the `.env` file with your own values:
+
+```bash
+cp .env.example .env
+```
+
 ### Installation
 
 ```bash

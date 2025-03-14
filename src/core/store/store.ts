@@ -14,53 +14,7 @@ export const useStore = create<{
   messages: Message[];
   responding: boolean;
 }>(() => ({
-  messages: [
-    // {
-    //   id: "1",
-    //   role: "user",
-    //   type: "text",
-    //   content: "东京的天气怎么样？",
-    // },
-    // {
-    //   id: "2",
-    //   role: "assistant",
-    //   type: "text",
-    //   content: "东京的天气晴朗，气温在10度左右。",
-    // },
-    // {
-    //   id: "3",
-    //   role: "assistant",
-    //   type: "workflow",
-    //   content: {
-    //     workflow: {
-    //       id: "123",
-    //       name: "东京天气查询",
-    //       steps: [
-    //         {
-    //           id: "123_1",
-    //           type: "agentic",
-    //           agentId: "123",
-    //           agentName: "researcher",
-    //           tasks: [
-    //             {
-    //               id: "4",
-    //               type: "tool_call",
-    //               payload: {
-    //                 toolName: "weather",
-    //                 toolInput: {
-    //                   city: "东京",
-    //                 },
-    //                 state: "pending",
-    //                 output: {},
-    //               },
-    //             },
-    //           ],
-    //         },
-    //       ],
-    //     },
-    //   },
-    // },
-  ],
+  messages: [],
   responding: false,
 }));
 

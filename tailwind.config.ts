@@ -5,6 +5,15 @@ export default {
   content: ["./src/**/*.tsx"],
   theme: {
     extend: {
+      width: {
+        page: "960px",
+      },
+      minWidth: {
+        page: "960px",
+      },
+      maxWidth: {
+        page: "960px",
+      },
       colors: {
         primary: "#1D4ED8",
       },

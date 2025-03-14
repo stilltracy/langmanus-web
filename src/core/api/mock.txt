@@ -1,0 +1,2639 @@
+event: start_of_workflow
+data: {"workflow_id": "a18a0969-535a-4722-9ea0-f8d576d8ade1", "input": [{"role": "user", "content": "Github \u4e0a LLM \u76f8\u5173\u7684\u9879\u76ee\u4e2d\uff0c\u6700\u9ad8 star \u7684 3 \u4e2a\u9879\u76ee\u6709\u54ea\u4e9b\uff1f"}]}
+
+event: start_of_agent
+data: {"agent_name": "researcher", "agent_id": "a18a0969-535a-4722-9ea0-f8d576d8ade1_researcher"}
+
+event: start_of_llm
+data: {"agent_name": "researcher"}
+
+event: end_of_llm
+data: {"agent_name": "researcher"}
+
+event: tool_call
+data: {"tool_call_id": "a18a0969-535a-4722-9ea0-f8d576d8ade1_researcher_tavily_search_2", "tool_name": "tavily_search", "tool_input": {"query": "highest star LLM projects on GitHub"}}
+
+event: tool_call_result
+data: {"tool_call_id": "a18a0969-535a-4722-9ea0-f8d576d8ade1_researcher_tavily_search_2", "tool_name": "tavily_search", "tool_result": "[{\"title\": \"Rising Stars on Github: Top Projects of 04/21/2024 Revealed!\", \"url\": \"https://medium.com/@webtrending/rising-stars-on-github-top-projects-of-04-21-2024-revealed-a0948181450b\", \"content\": \"This project enables users to run Large Language Models (LLMs), create images, audio, and more on local machines or on-premises using standard\", \"score\": 0.57666177}, {\"title\": \"Awesome-LLM: a curated list of Large Language Model - GitHub\", \"url\": \"https://github.com/Hannibal046/Awesome-LLM\", \"content\": \"GitHub - Hannibal046/Awesome-LLM: Awesome-LLM: a curated list of Large Language Model Awesome-LLM: a curated list of Large Language Model LLM Reading List - A paper & resource list of large language models. Awesome-Align-LLM-Human - A collection of papers and resources about aligning large language models (LLMs) with human. Awesome-LLM-3D - A curated list of Multi-modal Large Language Model in 3D world, including 3D understanding, reasoning, generation, and embodied agents. OpenAI Evals \u2014 An open-source library for evaluating task performance of language models and prompts. Generative AI with LangChain: Build large language model (LLM) apps with Python, ChatGPT, and other LLMs - it comes with a GitHub repository that showcases a lot of the functionality Awesome-LLM: a curated list of Large Language Model\", \"score\": 0.54346967}, {\"title\": \"InfiniteAICreations/awesome-llm-projects: A list of ... - GitHub\", \"url\": \"https://github.com/InfiniteAICreations/awesome-llm-projects\", \"content\": \"A comprehensive collection of projects, demonstrating the remarkable versatility and potential of llm applications.\", \"score\": 0.5272928}, {\"title\": \"What are top open source projects in LLM space - Reddit\", \"url\": \"https://www.reddit.com/r/LocalLLaMA/comments/17jmpn8/what_are_top_open_source_projects_in_llm_space/\", \"content\": \"Reddit - Dive into anything Open menu Open navigation  Go to Reddit Home r/LocalLLaMA r/LocalLLaMA Subreddit to discuss about Llama, the large language model created by Meta AI. New to Reddit?Create your account and connect with a world of communities. Reddit Reddit Reddit Reddit Rules Privacy Policy User Agreement Reddit, Inc. Action Movies & Series Animated Movies & Series Comedy Movies & Series Crime, Mystery, & Thriller Movies & Series Documentary Movies & Series Drama Movies & Series Fantasy Movies & Series Horror Movies & Series Movie News & Discussion Reality TV Romance Movies & Series Sci-Fi Movies & Series Superhero Movies & Series*   TV News & Discussion Communities Best of Reddit Topics TradeStation \u2022 Official \u2022 Promoted tradestation.com\", \"score\": 0.29322278}, {\"title\": \"Github-Ranking/Top100/Top-100-stars.md at master\", \"url\": \"https://github.com/EvanLi/Github-Ranking/blob/master/Top100/Top-100-stars.md\", \"content\": \"| 2025-02-07T01:23:00Z | | 2024-09-03T14:39:35Z | | 2024-12-05T23:47:30Z | | 2025-02-07T00:11:32Z | | 2024-12-02T01:10:39Z | | 2024-10-03T12:29:12Z | | 2024-08-11T17:10:18Z | | 2025-02-06T23:11:31Z | | 2024-09-05T04:11:45Z | | 2025-02-04T12:37:03Z | | 2025-02-01T06:09:31Z | | 2025-02-04T10:31:06Z | | 2025-02-06T23:30:27Z | | 2024-11-19T14:00:38Z | | 2025-02-07T01:03:26Z | | 2025-01-31T06:30:22Z | | 2025-02-07T02:45:09Z | | 2025-02-05T00:02:29Z | | 2025-02-03T18:27:49Z | | 2025-02-07T02:43:56Z | | 2025-01-28T23:15:23Z | | 2025-02-07T02:20:47Z | | 2025-02-06T23:23:11Z | | 2025-02-07T00:08:54Z | | 2025-01-27T03:53:33Z | | 2025-02-07T00:56:30Z | | 2025-02-06T09:50:47Z | | 2024-11-08T18:55:54Z | | 2025-02-07T03:33:12Z | | 2024-07-19T14:56:13Z | | 95 | fastapi | 80556 | 6911 | Python | 51 | FastAPI framework, high performance, easy to learn, fast to code, ready for production | 2025-02-03T18:07:13Z |\", \"score\": 0.14153068}]"}
+
+event: start_of_llm
+data: {"agent_name": "researcher"}
+
+event: end_of_llm
+data: {"agent_name": "researcher"}
+
+event: tool_call
+data: {"tool_call_id": "a18a0969-535a-4722-9ea0-f8d576d8ade1_researcher_crawl_tool_4", "tool_name": "crawl_tool", "tool_input": {"url": "https://github.com/EvanLi/Github-Ranking/blob/master/Top100/Top-100-stars.md"}}
+
+: ping - 2025-03-14 14:58:27.272019+00:00
+
+event: tool_call_result
+data: {"tool_call_id": "a18a0969-535a-4722-9ea0-f8d576d8ade1_researcher_crawl_tool_4", "tool_name": "crawl_tool", "tool_result": "{\"role\": \"user\", \"content\": [{\"type\": \"text\", \"text\": \"# Github-Ranking/Top100/Top-100-stars.md at master \u00b7 EvanLi/Github-Ranking\\n\\n|  |  |  |  |  |  |  |  |\\n| --- | --- | --- | --- | --- | --- | --- | --- |\\n| 1 | [freeCodeCamp](https://github.com/freeCodeCamp/freeCodeCamp) | 412088 | 39267 | TypeScript | 168 | freeCodeCamp.org's open-source codebase and curriculum. Learn to code for free. | 2025-03-14T00:01:13Z |\\n| 2 | [build-your-own-x](https://github.com/codecrafters-io/build-your-own-x) | 356382 | 33053 | Markdown | 194 | Master programming by recreating your favorite technologies from scratch. | 2024-09-03T14:39:35Z |\\n| 3 | [free-programming-books](https://github.com/EbookFoundation/free-programming-books) | 353045 | 63027 | HTML | 31 | \ud83d\udcda Freely available programming books | 2025-03-09T19:43:15Z |\\n| 4 | [awesome](https://github.com/sindresorhus/awesome) | 351292 | 28695 | None | 13 | \ud83d\ude0e Awesome lists about all kinds of interesting topics | 2025-03-13T11:57:42Z |\\n| 5 | [public-apis](https://github.com/public-apis/public-apis) | 332400 | 35120 | Python | 57 | A collective list of free APIs | 2024-10-31T19:50:02Z |\\n| 6 | [coding-interview-university](https://github.com/jwasham/coding-interview-university) | 313177 | 78144 | None | 53 | A complete computer science study plan to become a software engineer. | 2024-12-05T23:47:30Z |\\n| 7 | [developer-roadmap](https://github.com/kamranahmedse/developer-roadmap) | 311607 | 40593 | TypeScript | 156 | Interactive roadmaps, guides and other educational content to help developers grow in their careers. | 2025-03-14T03:25:02Z |\\n| 8 | [system-design-primer](https://github.com/donnemartin/system-design-primer) | 291807 | 48482 | Python | 236 | Learn how to design large-scale systems. Prep for the system design interview. Includes Anki flashcards. | 2024-12-02T01:10:39Z |\\n| 9 | [996.ICU](https://github.com/996icu/996.ICU) | 270423 | 21110 | None | 0 | Repo for counting stars and contributing. Press F to pay respect to glorious developers. | 2024-10-03T12:29:12Z |\\n| 10 | [awesome-python](https://github.com/vinta/awesome-python) | 237024 | 25399 | Python | 0 | An opinionated list of awesome Python frameworks, libraries, software and resources. | 2024-08-11T17:10:18Z |\\n| 11 | [react](https://github.com/facebook/react) | 233230 | 47896 | JavaScript | 772 | The library for web and native user interfaces. | 2025-03-14T02:29:51Z |\\n| 12 | [project-based-learning](https://github.com/practical-tutorials/project-based-learning) | 220622 | 28816 | None | 117 | Curated list of project-based tutorials | 2024-08-15T05:33:54Z |\\n| 13 | [awesome-selfhosted](https://github.com/awesome-selfhosted/awesome-selfhosted) | 220410 | 10367 | None | 0 | A list of Free Software network services and web applications which can be hosted on your own servers | 2025-03-13T22:21:18Z |\\n| 14 | [vue](https://github.com/vuejs/vue) | 208470 | 33732 | TypeScript | 356 | This is the repo for Vue 2. For Vue 3, go to <https://github.com/vuejs/core> | 2024-10-10T07:24:15Z |\\n| 15 | [Python](https://github.com/TheAlgorithms/Python) | 198370 | 46399 | Python | 63 | All Algorithms implemented in Python | 2025-03-11T14:29:13Z |\\n| 16 | [javascript-algorithms](https://github.com/trekhleb/javascript-algorithms) | 190454 | 30556 | JavaScript | 131 | \ud83d\udcdd Algorithms and data structures implemented in JavaScript with explanations and links to further readings | 2025-02-12T16:19:59Z |\\n| 17 | [linux](https://github.com/torvalds/linux) | 189497 | 55431 | C | 0 | Linux kernel source tree | 2025-03-14T01:36:53Z |\\n| 18 | [tensorflow](https://github.com/tensorflow/tensorflow) | 188606 | 74591 | C++ | 796 | An Open Source Machine Learning Framework for Everyone | 2025-03-14T03:28:37Z |\\n| 19 | [You-Dont-Know-JS](https://github.com/getify/You-Dont-Know-JS) | 181295 | 33588 | None | 80 | A book series (2 published editions) on the JS language. | 2025-03-06T00:26:37Z |\\n| 20 | [CS-Notes](https://github.com/CyC2018/CS-Notes) | 179327 | 51209 | None | 148 | \ud83d\udcda \u6280\u672f\u9762\u8bd5\u5fc5\u5907\u57fa\u7840\u77e5\u8bc6\u3001Leetcode\u3001\u8ba1\u7b97\u673a\u64cd\u4f5c\u7cfb\u7edf\u3001\u8ba1\u7b97\u673a\u7f51\u7edc\u3001\u7cfb\u7edf\u8bbe\u8ba1 | 2024-08-21T09:40:10Z |\\n| 21 | [ohmyzsh](https://github.com/ohmyzsh/ohmyzsh) | 176723 | 26017 | Shell | 134 | \ud83d\ude43 A delightful community-driven (with 2,400+ contributors) framework for managing your zsh configuration. Includes 300+ optional plugins (rails, git, macOS, hub, docker, homebrew, node, php, python, etc), 140+ themes to spice up your morning, and an auto-update tool that makes it easy to keep up with the latest updates from the community. | 2025-03-11T08:51:16Z |\\n| 22 | [computer-science](https://github.com/ossu/computer-science) | 176339 | 22395 | None | 13 | \ud83c\udf93 Path to a free self-taught education in Computer Science! | 2025-03-08T10:30:47Z |\\n| 23 | [AutoGPT](https://github.com/Significant-Gravitas/AutoGPT) | 173341 | 45322 | Python | 183 | AutoGPT is the vision of accessible AI for everyone, to use and to build on. Our mission is to provide the tools, so that you can focus on what matters. | 2025-03-14T03:28:03Z |\\n| 24 | [bootstrap](https://github.com/twbs/bootstrap) | 171756 | 79044 | JavaScript | 484 | The most popular HTML, CSS, and JavaScript framework for developing responsive, mobile first projects on the web. | 2025-03-11T10:30:55Z |\\n| 25 | [flutter](https://github.com/flutter/flutter) | 169121 | 28188 | Dart | 12975 | Flutter makes it easy and fast to build beautiful apps for mobile and beyond | 2025-03-14T01:55:21Z |\\n| 26 | [vscode](https://github.com/microsoft/vscode) | 168722 | 31012 | TypeScript | 8993 | Visual Studio Code | 2025-03-14T03:56:33Z |\\n| 27 | [gitignore](https://github.com/github/gitignore) | 164990 | 83100 | None | 0 | A collection of useful .gitignore templates | 2025-03-12T17:49:10Z |\\n| 28 | [Python-100-Days](https://github.com/jackfrued/Python-100-Days) | 162306 | 53170 | Jupyter Notebook | 548 | Python - 100\u5929\u4ece\u65b0\u624b\u5230\u5927\u5e08 | 2025-03-05T01:55:15Z |\\n| 29 | [the-book-of-secret-knowledge](https://github.com/trimstray/the-book-of-secret-knowledge) | 160500 | 10110 | None | 0 | A collection of inspiring lists, manuals, cheatsheets, blogs, hacks, one-liners, cli/web tools and more. | 2024-11-19T14:00:38Z |\\n| 30 | [the-art-of-command-line](https://github.com/jlevy/the-art-of-command-line) | 155109 | 14628 | None | 118 | Master the command line, in one page | 2024-06-25T18:13:44Z |\\n| 31 | [stable-diffusion-webui](https://github.com/AUTOMATIC1111/stable-diffusion-webui) | 149366 | 27890 | Python | 2310 | Stable Diffusion web UI | 2025-03-04T16:11:29Z |\\n| 32 | [JavaGuide](https://github.com/Snailclimb/JavaGuide) | 148682 | 45754 | Java | 64 | \u300cJava\u5b66\u4e60+\u9762\u8bd5\u6307\u5357\u300d\u4e00\u4efd\u6db5\u76d6\u5927\u90e8\u5206 Java \u7a0b\u5e8f\u5458\u6240\u9700\u8981\u638c\u63e1\u7684\u6838\u5fc3\u77e5\u8bc6\u3002\u51c6\u5907 Java \u9762\u8bd5\uff0c\u9996\u9009 JavaGuide\uff01 | 2025-03-13T02:14:08Z |\\n| 33 | [javascript](https://github.com/airbnb/javascript) | 146278 | 26694 | JavaScript | 95 | JavaScript Style Guide | 2024-12-09T06:56:18Z |\\n| 34 | [transformers](https://github.com/huggingface/transformers) | 141173 | 28277 | Python | 1026 | \ud83e\udd17 Transformers: State-of-the-art Machine Learning for Pytorch, TensorFlow, and JAX. | 2025-03-13T20:59:14Z |\\n| 35 | [awesome-go](https://github.com/avelino/awesome-go) | 139710 | 12147 | Go | 5 | A curated list of awesome Go frameworks, libraries and software | 2025-03-14T02:31:43Z |\\n| 36 | [youtube-dl](https://github.com/ytdl-org/youtube-dl) | 134642 | 10240 | Python | 3689 | Command-line program to download videos from YouTube.com and other video sites | 2025-03-11T02:00:24Z |\\n| 37 | [ollama](https://github.com/ollama/ollama) | 132789 | 10956 | Go | 1438 | Get up and running with Llama 3.3, DeepSeek-R1, Phi-4, Gemma 3, and other large language models. | 2025-03-14T02:18:44Z |\\n| 38 | [next.js](https://github.com/vercel/next.js) | 130161 | 27882 | JavaScript | 2552 | The React Framework | 2025-03-14T03:01:24Z |\\n| 39 | [fucking-algorithm](https://github.com/labuladong/fucking-algorithm) | 127183 | 23321 | Markdown | 1 | \u5237\u7b97\u6cd5\u5168\u9760\u5957\u8def\uff0c\u8ba4\u51c6 labuladong \u5c31\u591f\u4e86\uff01English version supported! Crack LeetCode, not only how, but also why. | 2025-01-31T06:30:22Z |\\n| 40 | [go](https://github.com/golang/go) | 126420 | 17938 | Go | 9213 | The Go programming language | 2025-03-14T00:19:29Z |\\n| 41 | [Microsoft-Activation-Scripts](https://github.com/massgravel/Microsoft-Activation-Scripts) | 125216 | 12173 | Batchfile | 1 | Open-source Windows and Office activator featuring HWID, Ohook, TSforge, KMS38, and Online KMS activation methods, along with advanced troubleshooting. | 2025-02-23T19:06:50Z |\\n| 42 | [30-seconds-of-code](https://github.com/Chalarangelo/30-seconds-of-code) | 123048 | 12114 | JavaScript | 0 | Coding articles to level up your development skills | 2025-03-13T20:20:17Z |\\n| 43 | [tech-interview-handbook](https://github.com/yangshun/tech-interview-handbook) | 122807 | 15086 | TypeScript | 38 | \ud83d\udcaf Curated coding interview preparation materials for busy software engineers | 2024-10-08T11:04:00Z |\\n| 44 | [awesome-chatgpt-prompts](https://github.com/f/awesome-chatgpt-prompts) | 121521 | 16326 | HTML | 0 | This repo includes ChatGPT prompt curation to use ChatGPT and other LLM tools better. | 2025-03-12T11:28:46Z |\\n| 45 | [react-native](https://github.com/facebook/react-native) | 121029 | 24551 | C++ | 594 | A framework for building native applications using React | 2025-03-14T00:22:27Z |\\n| 46 | [scrcpy](https://github.com/Genymobile/scrcpy) | 118968 | 11245 | C | 2233 | Display and control your Android device | 2025-03-12T08:43:52Z |\\n| 47 | [PowerToys](https://github.com/microsoft/PowerToys) | 116202 | 6848 | C# | 5932 | Windows system utilities to maximize productivity | 2025-03-14T02:37:50Z |\\n| 48 | [electron](https://github.com/electron/electron) | 115829 | 15882 | C++ | 862 | :electron: Build cross-platform desktop apps with JavaScript, HTML, and CSS | 2025-03-14T03:40:26Z |\\n| 49 | [kubernetes](https://github.com/kubernetes/kubernetes) | 113665 | 40405 | Go | 1892 | Production-Grade Container Scheduling and Management | 2025-03-14T03:09:46Z |\\n| 50 | [free-programming-books-zh\\\\_CN](https://github.com/justjavac/free-programming-books-zh_CN) | 112879 | 28270 | None | 0 | \ud83d\udcda \u514d\u8d39\u7684\u8ba1\u7b97\u673a\u7f16\u7a0b\u7c7b\u4e2d\u6587\u4e66\u7c4d\uff0c\u6b22\u8fce\u6295\u7a3f | 2024-07-15T08:55:20Z |\\n| 51 | [node](https://github.com/nodejs/node) | 110121 | 30949 | JavaScript | 1642 | Node.js JavaScript runtime \u2728\ud83d\udc22\ud83d\ude80\u2728 | 2025-03-14T01:41:22Z |\\n| 52 | [hello-algo](https://github.com/krahets/hello-algo) | 110072 | 13699 | Java | 21 | \u300aHello \u7b97\u6cd5\u300b\uff1a\u52a8\u753b\u56fe\u89e3\u3001\u4e00\u952e\u8fd0\u884c\u7684\u6570\u636e\u7ed3\u6784\u4e0e\u7b97\u6cd5\u6559\u7a0b\u3002\u652f\u6301 Python, Java, C++, C, C#, JS, Go, Swift, Rust, Ruby, Kotlin, TS, Dart \u4ee3\u7801\u3002\u7b80\u4f53\u7248\u548c\u7e41\u4f53\u7248\u540c\u6b65\u66f4\u65b0\uff0cEnglish version ongoing | 2025-03-11T08:56:34Z |\\n| 53 | [d3](https://github.com/d3/d3) | 110040 | 22865 | Shell | 8 | Bring data to life with SVG, Canvas and HTML. \ud83d\udcca\ud83d\udcc8\ud83c\udf89 | 2025-03-10T08:22:20Z |\\n| 54 | [axios](https://github.com/axios/axios) | 106511 | 11031 | JavaScript | 565 | Promise based HTTP client for the browser and node.js | 2025-03-14T01:29:41Z |\\n| 55 | [three.js](https://github.com/mrdoob/three.js) | 104937 | 35601 | JavaScript | 438 | JavaScript 3D Library. | 2025-03-14T00:05:43Z |\\n| 56 | [yt-dlp](https://github.com/yt-dlp/yt-dlp) | 104002 | 8156 | Python | 1530 | A feature-rich command-line audio/video downloader | 2025-03-13T04:37:33Z |\\n| 57 | [langchain](https://github.com/langchain-ai/langchain) | 103210 | 16709 | Jupyter Notebook | 335 | \ud83e\udd9c\ud83d\udd17 Build context-aware reasoning applications | 2025-03-14T03:20:21Z |\\n| 58 | [TypeScript](https://github.com/microsoft/TypeScript) | 103170 | 12725 | TypeScript | 5558 | TypeScript is a superset of JavaScript that compiles to clean JavaScript output. | 2025-03-14T02:24:30Z |\\n| 59 | [create-react-app](https://github.com/facebook/create-react-app) | 103108 | 26986 | JavaScript | 1813 | Set up a modern web app by running one command. | 2025-02-15T01:32:11Z |\\n| 60 | [deno](https://github.com/denoland/deno) | 102155 | 5511 | Rust | 1994 | A modern runtime for JavaScript and TypeScript. | 2025-03-13T22:15:57Z |\\n| 61 | [nodebestpractices](https://github.com/goldbergyoni/nodebestpractices) | 102042 | 10357 | Dockerfile | 43 | \u2705 The Node.js best practices list (July 2024) | 2024-07-04T03:41:45Z |\\n| 62 | [rust](https://github.com/rust-lang/rust) | 101948 | 13201 | Rust | 10100 | Empowering everyone to build reliable and efficient software. | 2025-03-14T03:50:14Z |\\n| 63 | [HelloGitHub](https://github.com/521xueweihan/HelloGitHub) | 99651 | 9835 | Python | 197 | :octocat: \u5206\u4eab GitHub \u4e0a\u6709\u8da3\u3001\u5165\u95e8\u7ea7\u7684\u5f00\u6e90\u9879\u76ee\u3002Share interesting, entry-level open source projects on GitHub. | 2025-03-10T10:04:23Z |\\n| 64 | [terminal](https://github.com/microsoft/terminal) | 97381 | 8480 | C++ | 1605 | The new Windows Terminal and the original Windows console host, all in the same place! | 2025-03-14T01:31:40Z |\\n| 65 | [angular](https://github.com/angular/angular) | 97190 | 25978 | TypeScript | 1511 | Deliver web apps with confidence \ud83d\ude80 | 2025-03-13T16:36:59Z |\\n| 66 | [godot](https://github.com/godotengine/godot) | 95123 | 21893 | C++ | 11519 | Godot Engine \u2013 Multi-platform 2D and 3D game engine | 2025-03-14T00:12:26Z |\\n| 67 | [material-ui](https://github.com/mui/material-ui) | 95028 | 32517 | TypeScript | 1686 | Material UI: Comprehensive React component library that implements Google's Material Design. Free forever. | 2025-03-13T18:57:16Z |\\n| 68 | [excalidraw](https://github.com/excalidraw/excalidraw) | 94339 | 9069 | TypeScript | 1665 | Virtual whiteboard for sketching hand-drawn like diagrams | 2025-03-13T08:31:00Z |\\n| 69 | [ant-design](https://github.com/ant-design/ant-design) | 93950 | 51540 | TypeScript | 1223 | An enterprise-class UI design language and React UI library | 2025-03-14T02:51:35Z |\\n| 70 | [free-for-dev](https://github.com/ripienaar/free-for-dev) | 92731 | 10045 | HTML | 0 | A list of SaaS, PaaS and IaaS offerings that have free tiers of interest to devops and infradev | 2025-03-12T12:56:57Z |\\n| 71 | [clean-code-javascript](https://github.com/ryanmcdermott/clean-code-javascript) | 92604 | 12396 | JavaScript | 75 | Clean Code concepts adapted for JavaScript | 2024-07-29T07:24:37Z |\\n| 72 | [DeepSeek-V3](https://github.com/deepseek-ai/DeepSeek-V3) | 92060 | 14924 | Python | 102 | None | 2025-02-24T03:50:20Z |\\n| 73 | [papers-we-love](https://github.com/papers-we-love/papers-we-love) | 91561 | 5862 | Shell | 1 | Papers from the computer science community to read and discuss. | 2025-02-19T01:13:05Z |\\n| 74 | [frp](https://github.com/fatedier/frp) | 91452 | 13788 | Go | 61 | A fast reverse proxy to help you expose a local server behind a NAT or firewall to the internet. | 2025-03-07T09:27:56Z |\\n| 75 | [java-design-patterns](https://github.com/iluwatar/java-design-patterns) | 90993 | 26842 | Java | 127 | Design patterns implemented in Java | 2025-03-11T19:47:43Z |\\n| 76 | [iptv](https://github.com/iptv-org/iptv) | 90948 | 3225 | JavaScript | 304 | Collection of publicly available IPTV channels from all over the world | 2025-03-14T00:10:57Z |\\n| 77 | [thefuck](https://github.com/nvbn/thefuck) | 90758 | 3644 | Python | 277 | Magnificent app which corrects your previous console command. | 2024-07-19T14:56:13Z |\\n| 78 | [tauri](https://github.com/tauri-apps/tauri) | 90450 | 2767 | Rust | 986 | Build smaller, faster, and more secure desktop and mobile applications with a web frontend. | 2025-03-14T03:50:19Z |\\n| 79 | [puppeteer](https://github.com/puppeteer/puppeteer) | 89996 | 9158 | TypeScript | 256 | JavaScript API for Chrome and Firefox | 2025-03-13T17:03:44Z |\\n| 80 | [Awesome-Hacking](https://github.com/Hack-with-Github/Awesome-Hacking) | 89985 | 9164 | None | 0 | A collection of various awesome lists for hackers, pentesters and security researchers | 2025-01-18T01:48:02Z |\\n| 81 | [vue-element-admin](https://github.com/PanJiaChen/vue-element-admin) | 88914 | 30558 | Vue | 1242 | \ud83c\udf89 A magical vue admin <https://panjiachen.github.io/vue-element-admin> | 2024-10-24T11:25:46Z |\\n| 82 | [pytorch](https://github.com/pytorch/pytorch) | 87871 | 23583 | Python | 14655 | Tensors and Dynamic neural networks in Python with strong GPU acceleration | 2025-03-14T04:01:03Z |\\n| 83 | [neovim](https://github.com/neovim/neovim) | 87142 | 5927 | Vim Script | 1559 | Vim-fork focused on extensibility and usability | 2025-03-14T03:36:24Z |\\n| 84 | [every-programmer-should-know](https://github.com/mtdvio/every-programmer-should-know) | 86557 | 7960 | None | 29 | A collection of (mostly) technical things every software developer should know about | 2024-08-06T12:01:28Z |\\n| 85 | [tailwindcss](https://github.com/tailwindlabs/tailwindcss) | 86327 | 4418 | TypeScript | 85 | A utility-first CSS framework for rapid UI development. | 2025-03-14T00:47:38Z |\\n| 86 | [DeepSeek-R1](https://github.com/deepseek-ai/DeepSeek-R1) | 86258 | 11126 | None | 297 | None | 2025-02-24T03:49:25Z |\\n| 87 | [storybook](https://github.com/storybookjs/storybook) | 86091 | 9473 | TypeScript | 2059 | Storybook is the industry standard workshop for building, documenting, and testing UI components in isolation | 2025-03-13T21:01:16Z |\\n| 88 | [Web-Dev-For-Beginners](https://github.com/microsoft/Web-Dev-For-Beginners) | 85556 | 12743 | JavaScript | 57 | 24 Lessons, 12 Weeks, Get Started as a Web Developer | 2025-03-10T20:27:28Z |\\n| 89 | [rustdesk](https://github.com/rustdesk/rustdesk) | 84136 | 11844 | Rust | 48 | An open-source remote desktop application designed for self-hosting, as an alternative to TeamViewer. | 2025-03-13T16:21:05Z |\\n| 90 | [open-webui](https://github.com/open-webui/open-webui) | 83109 | 10027 | JavaScript | 180 | User-friendly AI Interface (Supports Ollama, OpenAI API, ...) | 2025-03-13T14:16:29Z |\\n| 91 | [nvm](https://github.com/nvm-sh/nvm) | 82769 | 8298 | Shell | 305 | Node Version Manager - POSIX-compliant bash script to manage multiple active node.js versions | 2025-03-11T20:43:03Z |\\n| 92 | [django](https://github.com/django/django) | 82702 | 32363 | Python | 0 | The Web framework for perfectionists with deadlines. | 2025-03-13T18:24:11Z |\\n| 93 | [ui](https://github.com/shadcn-ui/ui) | 82672 | 5480 | TypeScript | 827 | A set of beautifully-designed, accessible components and a code distribution platform. Works with your favorite frameworks. Open Source. Open Code. | 2025-03-13T11:03:22Z |\\n| 94 | [app-ideas](https://github.com/florinpop17/app-ideas) | 82534 | 9670 | None | 126 | A Collection of application ideas which can be used to improve your coding skills. | 2024-08-16T09:41:10Z |\\n| 95 | [bitcoin](https://github.com/bitcoin/bitcoin) | 82461 | 36927 | C++ | 398 | Bitcoin Core integration/staging tree | 2025-03-14T03:23:42Z |\\n| 96 | [fastapi](https://github.com/fastapi/fastapi) | 81982 | 7081 | Python | 53 | FastAPI framework, high performance, easy to learn, fast to code, ready for production | 2025-03-10T17:28:24Z |\\n| 97 | [NextChat](https://github.com/ChatGPTNextWeb/NextChat) | 81908 | 61236 | TypeScript | 592 | \u2728 Light and Fast AI Assistant. Support: Web | iOS | MacOS | Android | Linux | Windows | 2025-03-10T10:48:27Z |\\n| 98 | [dify](https://github.com/langgenius/dify) | 81894 | 12016 | TypeScript | 537 | Dify is an open-source LLM app development platform. Dify's intuitive interface combines AI workflow, RAG pipeline, agent capabilities, model management, observability features and more, letting you quickly go from prototype to production. | 2025-03-14T03:28:50Z |\\n| 99 | [svelte](https://github.com/sveltejs/svelte) | 81752 | 4419 | JavaScript | 775 | web development for the rest of us | 2025-03-14T00:30:15Z |\\n| 100 | [animate.css](https://github.com/animate-css/animate.css) | 81416 | 16220 | CSS | 32 | \ud83c\udf7f A cross-browser library of CSS animations. As easy to use as an easy thing. | 2024-07-29T19:34:21Z |\"}]}"}
+
+event: start_of_llm
+data: {"agent_name": "researcher"}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": "###"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": " Problem"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": " Statement"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": "\n\n"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": "\u627e"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": "\u51fa"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": " Github"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": " \u4e0a"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": "\u4e0e"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": " L"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": "LM"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": "\uff08"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": "\u5927\u578b"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": "\u8bed\u8a00"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": "\u6a21\u578b"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": "\uff09"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": "\u76f8\u5173"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": "\u7684"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": "\u9879\u76ee"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": "\u4e2d"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": "\uff0c"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": "star"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": " \u6570"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": "\u6700\u9ad8"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": "\u7684"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": "\u4e09\u4e2a"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": "\u9879\u76ee"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": "\u3002\n\n"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": "###"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": " SEO"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": " Search"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": " Results"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": "\n\n"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": "\u901a\u8fc7"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": "\u641c\u7d22"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": "\uff0c"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": "\u627e"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": "\u5230\u4e86"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": "\u4e00\u4e2a"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": "\u76f8\u5173"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": "\u7684"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": "\u8d44\u6e90"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": "\u94fe\u63a5"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": "\uff0c"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": "\u6307"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": "\u5411"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": "\u4e86"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": "\u4e00\u4e2a"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": " Git"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": "Hub"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": " \u6392"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": "\u884c"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": "\u699c"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": "\u9875\u9762"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": "\uff0c"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": "\u5217"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": "\u51fa\u4e86"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": " Git"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": "Hub"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": " \u4e0a"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": " star"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": " \u6570"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": "\u6700\u9ad8"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": "\u7684"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": "\u9879\u76ee"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": "\u3002\n\n"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": "###"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": " Craw"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": "led"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": " Content"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": "\n\n"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": "\u4ece"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": " ["}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": "Github"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": "-R"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": "anking"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": "/"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": "Top"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": "100"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": "/"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": "Top"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": "-"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": "100"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": "-stars"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": ".md"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": "]("}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": "https"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": "://"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": "github"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": ".com"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": "/E"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": "van"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": "Li"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": "/G"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": "ithub"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": "-R"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": "anking"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": "/blob"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": "/master"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": "/"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": "Top"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": "100"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": "/"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": "Top"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": "-"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": "100"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": "-stars"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": ".md"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": ")"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": " \u9875\u9762"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": "\u4e2d"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": "\uff0c"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": "\u63d0"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": "\u53d6"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": "\u4e86"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": " star"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": " \u6570"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": "\u6700\u9ad8"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": "\u7684"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": "\u9879\u76ee"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": "\u5217\u8868"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": "\u3002"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": "\u4ee5\u4e0b"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": "\u662f"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": "\u4e0e"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": " L"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": "LM"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": " "}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": "\u76f8\u5173"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": "\u7684"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": "\u9879\u76ee"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": "\u4e2d"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": " star"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": " \u6570"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": "\u6700\u9ad8"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": "\u7684"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": "\u4e09\u4e2a"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": "\uff1a\n\n"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": "1"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": "."}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": " **"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": "["}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": "transform"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": "ers"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": "]("}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": "https"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": "://"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": "github"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": ".com"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": "/h"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": "ug"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": "ging"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": "face"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": "/"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": "transform"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": "ers"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": ")"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": "**\n"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": "  "}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": " -"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": " Stars"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": ":"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": " "}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": "141"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": ","}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": "173"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": "\n"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": "  "}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": " -"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": " \u63cf"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": "\u8ff0"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": ":"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": " \ud83e\udd17"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": " Transformers"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": ":"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": " State"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": "-of"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": "-the"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": "-art"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": " Machine"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": " Learning"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": " for"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": " P"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": "ytorch"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": ","}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": " Tensor"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": "Flow"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": ","}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": " and"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": " J"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": "AX"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": ".\n\n"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": "2"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": "."}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": " **"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": "["}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": "lang"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": "chain"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": "]("}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": "https"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": "://"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": "github"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": ".com"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": "/lang"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": "chain"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": "-ai"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": "/lang"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": "chain"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": ")"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": "**\n"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": "  "}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": " -"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": " Stars"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": ":"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": " "}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": "103"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": ","}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": "210"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": "\n"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": "  "}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": " -"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": " \u63cf"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": "\u8ff0"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": ":"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": " \ud83e\udd9c"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": "\ud83d\udd17"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": " Build"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": " context"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": "-aware"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": " reasoning"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": " applications"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": ".\n\n"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": "3"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": "."}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": " **"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": "["}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": "oll"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": "ama"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": "]("}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": "https"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": "://"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": "github"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": ".com"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": "/"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": "oll"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": "ama"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": "/"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": "oll"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": "ama"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": ")"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": "**\n"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": "  "}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": " -"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": " Stars"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": ":"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": " "}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": "132"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": ","}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": "789"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": "\n"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": "  "}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": " -"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": " \u63cf"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": "\u8ff0"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": ":"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": " Get"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": " up"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": " and"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": " running"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": " with"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": " L"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": "lama"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": " "}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": "3"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": "."}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": "3"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": ","}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": " Deep"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": "Seek"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": "-R"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": "1"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": ","}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": " Phi"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": "-"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": "4"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": ","}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": " Gem"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": "ma"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": " "}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": "3"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": ","}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": " and"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": " other"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": " large"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": " language"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": " models"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": ".\n\n"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": "###"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": " Conclusion"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": "\n\n"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": "\u5728"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": " Git"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": "Hub"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": " \u4e0a"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": "\u4e0e"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": " L"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": "LM"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": " "}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": "\u76f8\u5173"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": "\u7684"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": "\u9879\u76ee"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": "\u4e2d"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": "\uff0c"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": "star"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": " \u6570"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": "\u6700\u9ad8"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": "\u7684"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": "\u4e09\u4e2a"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": "\u9879\u76ee"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": "\u5206\u522b"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": "\u662f"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": "\uff1a\n\n"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": "1"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": "."}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": " **"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": "Transform"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": "ers"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": "**"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": " -"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": " \u63d0"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": "\u4f9b"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": "\u6700"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": "\u5148\u8fdb"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": "\u7684"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": "\u673a\u5668"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": "\u5b66\u4e60"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": "\u6a21\u578b"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": "\uff0c"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": "\u652f\u6301"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": " P"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": "ytorch"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": "\u3001"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": "Tensor"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": "Flow"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": " \u548c"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": " J"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": "AX"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": "\u3002\n"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": "2"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": "."}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": " **"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": "Lang"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": "chain"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": "**"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": " -"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": " \u7528"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": "\u4e8e"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": "\u6784"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": "\u5efa"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": "\u4e0a\u4e0b"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": "\u6587"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": "\u611f"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": "\u77e5"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": "\u7684"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": "\u63a8"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": "\u7406"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": "\u5e94\u7528"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": "\u7a0b\u5e8f"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": "\u3002\n"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": "3"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": "."}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": " **"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": "O"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": "ll"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": "ama"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": "**"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": " -"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": " \u63d0"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": "\u4f9b"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": " L"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": "lama"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": " "}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": "3"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": "."}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": "3"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": "\u3001"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": "Deep"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": "Seek"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": "-R"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": "1"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": "\u3001"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": "Phi"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": "-"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": "4"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": "\u3001"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": "Gem"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": "ma"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": " "}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": "3"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": " \u7b49"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": "\u5927\u578b"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": "\u8bed\u8a00"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": "\u6a21\u578b"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": "\u7684"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": "\u652f\u6301"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": "\u3002\n\n"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": "\u8fd9\u4e9b"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": "\u9879\u76ee"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": "\u5728"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": " L"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": "LM"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": " "}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": "\u9886\u57df"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": "\u4e2d"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": "\u5177\u6709"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": "\u5f88"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": "\u9ad8"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": "\u7684"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": "\u5f71\u54cd"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": "\u529b"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": "\u548c"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": "\u5e7f"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": "\u6cdb"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": "\u7684"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": "\u5e94\u7528"}}
+
+event: message
+data: {"message_id": "run-ac9e1a58-d56c-4a1f-95a7-bbb35ff1c8fd", "delta": {"content": "\u3002"}}
+
+event: end_of_llm
+data: {"agent_name": "researcher"}
+
+event: end_of_agent
+data: {"agent_name": "researcher", "agent_id": "a18a0969-535a-4722-9ea0-f8d576d8ade1_researcher"}
+
+event: start_of_agent
+data: {"agent_name": "researcher", "agent_id": "a18a0969-535a-4722-9ea0-f8d576d8ade1_researcher"}
+
+event: start_of_llm
+data: {"agent_name": "researcher"}
+
+event: end_of_llm
+data: {"agent_name": "researcher"}
+
+event: tool_call
+data: {"tool_call_id": "a18a0969-535a-4722-9ea0-f8d576d8ade1_researcher_tavily_search_2", "tool_name": "tavily_search", "tool_input": {"query": "GitHub LLM projects with highest stars"}}
+
+: ping - 2025-03-14 14:58:42.273249+00:00
+
+event: tool_call_result
+data: {"tool_call_id": "a18a0969-535a-4722-9ea0-f8d576d8ade1_researcher_tavily_search_2", "tool_name": "tavily_search", "tool_result": "[{\"title\": \"InfiniteAICreations/awesome-llm-projects: A list of ... - GitHub\", \"url\": \"https://github.com/InfiniteAICreations/awesome-llm-projects\", \"content\": \"Command-R: Command-R is a scalable generative model targeting RAG and Tool Use to enable production-scale AI for enterprise. Dream Machine: Dream Machine is an AI model that makes high quality, realistic videos fast from text and images. Midjourney: Midjourney is a generative artificial intelligence program and service that creates images from natural language descriptions, similar to other AI technologies like OpenAI's DALL-E and Stability AI's Stable Diffusion. Krea: Generate and enhance images and videos using powerful AI for free. Tensor.Art: AI model sharing platform, online run models to generate image and traning model for free. Devv: The next generation AI search engine for developers. vLLM: A high-throughput and memory-efficient inference and serving engine for LLMs. Text Generation Inference: Large Language Model Text Generation Inference\", \"score\": 0.63615024}, {\"title\": \"Awesome-LLM: a curated list of Large Language Model - GitHub\", \"url\": \"https://github.com/Hannibal046/Awesome-LLM\", \"content\": \"GitHub - Hannibal046/Awesome-LLM: Awesome-LLM: a curated list of Large Language Model Awesome-LLM: a curated list of Large Language Model LLM Reading List - A paper & resource list of large language models. Awesome-Align-LLM-Human - A collection of papers and resources about aligning large language models (LLMs) with human. Awesome-LLM-3D - A curated list of Multi-modal Large Language Model in 3D world, including 3D understanding, reasoning, generation, and embodied agents. OpenAI Evals \u2014 An open-source library for evaluating task performance of language models and prompts. Generative AI with LangChain: Build large language model (LLM) apps with Python, ChatGPT, and other LLMs - it comes with a GitHub repository that showcases a lot of the functionality Awesome-LLM: a curated list of Large Language Model\", \"score\": 0.5053471}, {\"title\": \"\ufe0f Top 10 Open-source Workflows Projects with the Most GitHub Stars\", \"url\": \"https://www.nocobase.com/en/blog/top-10-open-source-workflows-projects-with-the-most-github-stars\", \"content\": \"UVdesk: A customer support platform that integrates multiple channels and automates workflows to streamline and optimize support operations. Pipedream: An event-driven integration platform that connects applications and automates workflows, offering advanced customization options with code. Elsa 3.0: A .NET-based workflow engine that supports both code-defined and visual workflows, ideal for automating processes and managing data pipelines. Appsmith is an open-source low-code platform designed to help developers quickly create custom internal tools, dashboards, and management panels. Pipedream is an open-source integration platform built for developers to streamline app connections and workflow automation. Designed for managing workflows in distributed systems, these tools handle long-running tasks and complex microservice orchestration. Project Management and Customer Support Tools: Optimize team workflows and enhance service quality.\", \"score\": 0.30281404}, {\"title\": \"What are top open source projects in LLM space - Reddit\", \"url\": \"https://www.reddit.com/r/LocalLLaMA/comments/17jmpn8/what_are_top_open_source_projects_in_llm_space/\", \"content\": \"Reddit - Dive into anything Open menu Open navigation  Go to Reddit Home r/LocalLLaMA r/LocalLLaMA Subreddit to discuss about Llama, the large language model created by Meta AI. New to Reddit?Create your account and connect with a world of communities. Reddit Reddit Reddit Reddit Rules Privacy Policy User Agreement Reddit, Inc. Action Movies & Series Animated Movies & Series Comedy Movies & Series Crime, Mystery, & Thriller Movies & Series Documentary Movies & Series Drama Movies & Series Fantasy Movies & Series Horror Movies & Series Movie News & Discussion Reality TV Romance Movies & Series Sci-Fi Movies & Series Superhero Movies & Series*   TV News & Discussion Communities Best of Reddit Topics TradeStation \u2022 Official \u2022 Promoted tradestation.com\", \"score\": 0.27713096}, {\"title\": \"Github-Ranking/Top100/Top-100-stars.md at master\", \"url\": \"https://github.com/EvanLi/Github-Ranking/blob/master/Top100/Top-100-stars.md\", \"content\": \"| 2025-02-07T01:23:00Z | | 2024-09-03T14:39:35Z | | 2024-12-05T23:47:30Z | | 2025-02-07T00:11:32Z | | 2024-12-02T01:10:39Z | | 2024-10-03T12:29:12Z | | 2024-08-11T17:10:18Z | | 2025-02-06T23:11:31Z | | 2024-09-05T04:11:45Z | | 2025-02-04T12:37:03Z | | 2025-02-01T06:09:31Z | | 2025-02-04T10:31:06Z | | 2025-02-06T23:30:27Z | | 2024-11-19T14:00:38Z | | 2025-02-07T01:03:26Z | | 2025-01-31T06:30:22Z | | 2025-02-07T02:45:09Z | | 2025-02-05T00:02:29Z | | 2025-02-03T18:27:49Z | | 2025-02-07T02:43:56Z | | 2025-01-28T23:15:23Z | | 2025-02-07T02:20:47Z | | 2025-02-06T23:23:11Z | | 2025-02-07T00:08:54Z | | 2025-01-27T03:53:33Z | | 2025-02-07T00:56:30Z | | 2025-02-06T09:50:47Z | | 2024-11-08T18:55:54Z | | 2025-02-07T03:33:12Z | | 2024-07-19T14:56:13Z | | 95 | fastapi | 80556 | 6911 | Python | 51 | FastAPI framework, high performance, easy to learn, fast to code, ready for production | 2025-02-03T18:07:13Z |\", \"score\": 0.2210903}]"}
+
+event: start_of_llm
+data: {"agent_name": "researcher"}
+
+event: end_of_llm
+data: {"agent_name": "researcher"}
+
+event: tool_call
+data: {"tool_call_id": "a18a0969-535a-4722-9ea0-f8d576d8ade1_researcher_crawl_tool_4", "tool_name": "crawl_tool", "tool_input": {"url": "https://github.com/EvanLi/Github-Ranking/blob/master/Top100/Top-100-stars.md"}}
+
+event: tool_call_result
+data: {"tool_call_id": "a18a0969-535a-4722-9ea0-f8d576d8ade1_researcher_crawl_tool_4", "tool_name": "crawl_tool", "tool_result": "{\"role\": \"user\", \"content\": [{\"type\": \"text\", \"text\": \"# Github-Ranking/Top100/Top-100-stars.md at master \u00b7 EvanLi/Github-Ranking\\n\\n|  |  |  |  |  |  |  |  |\\n| --- | --- | --- | --- | --- | --- | --- | --- |\\n| 1 | [freeCodeCamp](https://github.com/freeCodeCamp/freeCodeCamp) | 412088 | 39267 | TypeScript | 168 | freeCodeCamp.org's open-source codebase and curriculum. Learn to code for free. | 2025-03-14T00:01:13Z |\\n| 2 | [build-your-own-x](https://github.com/codecrafters-io/build-your-own-x) | 356382 | 33053 | Markdown | 194 | Master programming by recreating your favorite technologies from scratch. | 2024-09-03T14:39:35Z |\\n| 3 | [free-programming-books](https://github.com/EbookFoundation/free-programming-books) | 353045 | 63027 | HTML | 31 | \ud83d\udcda Freely available programming books | 2025-03-09T19:43:15Z |\\n| 4 | [awesome](https://github.com/sindresorhus/awesome) | 351292 | 28695 | None | 13 | \ud83d\ude0e Awesome lists about all kinds of interesting topics | 2025-03-13T11:57:42Z |\\n| 5 | [public-apis](https://github.com/public-apis/public-apis) | 332400 | 35120 | Python | 57 | A collective list of free APIs | 2024-10-31T19:50:02Z |\\n| 6 | [coding-interview-university](https://github.com/jwasham/coding-interview-university) | 313177 | 78144 | None | 53 | A complete computer science study plan to become a software engineer. | 2024-12-05T23:47:30Z |\\n| 7 | [developer-roadmap](https://github.com/kamranahmedse/developer-roadmap) | 311607 | 40593 | TypeScript | 156 | Interactive roadmaps, guides and other educational content to help developers grow in their careers. | 2025-03-14T03:25:02Z |\\n| 8 | [system-design-primer](https://github.com/donnemartin/system-design-primer) | 291807 | 48482 | Python | 236 | Learn how to design large-scale systems. Prep for the system design interview. Includes Anki flashcards. | 2024-12-02T01:10:39Z |\\n| 9 | [996.ICU](https://github.com/996icu/996.ICU) | 270423 | 21110 | None | 0 | Repo for counting stars and contributing. Press F to pay respect to glorious developers. | 2024-10-03T12:29:12Z |\\n| 10 | [awesome-python](https://github.com/vinta/awesome-python) | 237024 | 25399 | Python | 0 | An opinionated list of awesome Python frameworks, libraries, software and resources. | 2024-08-11T17:10:18Z |\\n| 11 | [react](https://github.com/facebook/react) | 233230 | 47896 | JavaScript | 772 | The library for web and native user interfaces. | 2025-03-14T02:29:51Z |\\n| 12 | [project-based-learning](https://github.com/practical-tutorials/project-based-learning) | 220622 | 28816 | None | 117 | Curated list of project-based tutorials | 2024-08-15T05:33:54Z |\\n| 13 | [awesome-selfhosted](https://github.com/awesome-selfhosted/awesome-selfhosted) | 220410 | 10367 | None | 0 | A list of Free Software network services and web applications which can be hosted on your own servers | 2025-03-13T22:21:18Z |\\n| 14 | [vue](https://github.com/vuejs/vue) | 208470 | 33732 | TypeScript | 356 | This is the repo for Vue 2. For Vue 3, go to <https://github.com/vuejs/core> | 2024-10-10T07:24:15Z |\\n| 15 | [Python](https://github.com/TheAlgorithms/Python) | 198370 | 46399 | Python | 63 | All Algorithms implemented in Python | 2025-03-11T14:29:13Z |\\n| 16 | [javascript-algorithms](https://github.com/trekhleb/javascript-algorithms) | 190454 | 30556 | JavaScript | 131 | \ud83d\udcdd Algorithms and data structures implemented in JavaScript with explanations and links to further readings | 2025-02-12T16:19:59Z |\\n| 17 | [linux](https://github.com/torvalds/linux) | 189497 | 55431 | C | 0 | Linux kernel source tree | 2025-03-14T01:36:53Z |\\n| 18 | [tensorflow](https://github.com/tensorflow/tensorflow) | 188606 | 74591 | C++ | 796 | An Open Source Machine Learning Framework for Everyone | 2025-03-14T03:28:37Z |\\n| 19 | [You-Dont-Know-JS](https://github.com/getify/You-Dont-Know-JS) | 181295 | 33588 | None | 80 | A book series (2 published editions) on the JS language. | 2025-03-06T00:26:37Z |\\n| 20 | [CS-Notes](https://github.com/CyC2018/CS-Notes) | 179327 | 51209 | None | 148 | \ud83d\udcda \u6280\u672f\u9762\u8bd5\u5fc5\u5907\u57fa\u7840\u77e5\u8bc6\u3001Leetcode\u3001\u8ba1\u7b97\u673a\u64cd\u4f5c\u7cfb\u7edf\u3001\u8ba1\u7b97\u673a\u7f51\u7edc\u3001\u7cfb\u7edf\u8bbe\u8ba1 | 2024-08-21T09:40:10Z |\\n| 21 | [ohmyzsh](https://github.com/ohmyzsh/ohmyzsh) | 176723 | 26017 | Shell | 134 | \ud83d\ude43 A delightful community-driven (with 2,400+ contributors) framework for managing your zsh configuration. Includes 300+ optional plugins (rails, git, macOS, hub, docker, homebrew, node, php, python, etc), 140+ themes to spice up your morning, and an auto-update tool that makes it easy to keep up with the latest updates from the community. | 2025-03-11T08:51:16Z |\\n| 22 | [computer-science](https://github.com/ossu/computer-science) | 176339 | 22395 | None | 13 | \ud83c\udf93 Path to a free self-taught education in Computer Science! | 2025-03-08T10:30:47Z |\\n| 23 | [AutoGPT](https://github.com/Significant-Gravitas/AutoGPT) | 173341 | 45322 | Python | 183 | AutoGPT is the vision of accessible AI for everyone, to use and to build on. Our mission is to provide the tools, so that you can focus on what matters. | 2025-03-14T03:28:03Z |\\n| 24 | [bootstrap](https://github.com/twbs/bootstrap) | 171756 | 79044 | JavaScript | 484 | The most popular HTML, CSS, and JavaScript framework for developing responsive, mobile first projects on the web. | 2025-03-11T10:30:55Z |\\n| 25 | [flutter](https://github.com/flutter/flutter) | 169121 | 28188 | Dart | 12975 | Flutter makes it easy and fast to build beautiful apps for mobile and beyond | 2025-03-14T01:55:21Z |\\n| 26 | [vscode](https://github.com/microsoft/vscode) | 168722 | 31012 | TypeScript | 8993 | Visual Studio Code | 2025-03-14T03:56:33Z |\\n| 27 | [gitignore](https://github.com/github/gitignore) | 164990 | 83100 | None | 0 | A collection of useful .gitignore templates | 2025-03-12T17:49:10Z |\\n| 28 | [Python-100-Days](https://github.com/jackfrued/Python-100-Days) | 162306 | 53170 | Jupyter Notebook | 548 | Python - 100\u5929\u4ece\u65b0\u624b\u5230\u5927\u5e08 | 2025-03-05T01:55:15Z |\\n| 29 | [the-book-of-secret-knowledge](https://github.com/trimstray/the-book-of-secret-knowledge) | 160500 | 10110 | None | 0 | A collection of inspiring lists, manuals, cheatsheets, blogs, hacks, one-liners, cli/web tools and more. | 2024-11-19T14:00:38Z |\\n| 30 | [the-art-of-command-line](https://github.com/jlevy/the-art-of-command-line) | 155109 | 14628 | None | 118 | Master the command line, in one page | 2024-06-25T18:13:44Z |\\n| 31 | [stable-diffusion-webui](https://github.com/AUTOMATIC1111/stable-diffusion-webui) | 149366 | 27890 | Python | 2310 | Stable Diffusion web UI | 2025-03-04T16:11:29Z |\\n| 32 | [JavaGuide](https://github.com/Snailclimb/JavaGuide) | 148682 | 45754 | Java | 64 | \u300cJava\u5b66\u4e60+\u9762\u8bd5\u6307\u5357\u300d\u4e00\u4efd\u6db5\u76d6\u5927\u90e8\u5206 Java \u7a0b\u5e8f\u5458\u6240\u9700\u8981\u638c\u63e1\u7684\u6838\u5fc3\u77e5\u8bc6\u3002\u51c6\u5907 Java \u9762\u8bd5\uff0c\u9996\u9009 JavaGuide\uff01 | 2025-03-13T02:14:08Z |\\n| 33 | [javascript](https://github.com/airbnb/javascript) | 146278 | 26694 | JavaScript | 95 | JavaScript Style Guide | 2024-12-09T06:56:18Z |\\n| 34 | [transformers](https://github.com/huggingface/transformers) | 141173 | 28277 | Python | 1026 | \ud83e\udd17 Transformers: State-of-the-art Machine Learning for Pytorch, TensorFlow, and JAX. | 2025-03-13T20:59:14Z |\\n| 35 | [awesome-go](https://github.com/avelino/awesome-go) | 139710 | 12147 | Go | 5 | A curated list of awesome Go frameworks, libraries and software | 2025-03-14T02:31:43Z |\\n| 36 | [youtube-dl](https://github.com/ytdl-org/youtube-dl) | 134642 | 10240 | Python | 3689 | Command-line program to download videos from YouTube.com and other video sites | 2025-03-11T02:00:24Z |\\n| 37 | [ollama](https://github.com/ollama/ollama) | 132789 | 10956 | Go | 1438 | Get up and running with Llama 3.3, DeepSeek-R1, Phi-4, Gemma 3, and other large language models. | 2025-03-14T02:18:44Z |\\n| 38 | [next.js](https://github.com/vercel/next.js) | 130161 | 27882 | JavaScript | 2552 | The React Framework | 2025-03-14T03:01:24Z |\\n| 39 | [fucking-algorithm](https://github.com/labuladong/fucking-algorithm) | 127183 | 23321 | Markdown | 1 | \u5237\u7b97\u6cd5\u5168\u9760\u5957\u8def\uff0c\u8ba4\u51c6 labuladong \u5c31\u591f\u4e86\uff01English version supported! Crack LeetCode, not only how, but also why. | 2025-01-31T06:30:22Z |\\n| 40 | [go](https://github.com/golang/go) | 126420 | 17938 | Go | 9213 | The Go programming language | 2025-03-14T00:19:29Z |\\n| 41 | [Microsoft-Activation-Scripts](https://github.com/massgravel/Microsoft-Activation-Scripts) | 125216 | 12173 | Batchfile | 1 | Open-source Windows and Office activator featuring HWID, Ohook, TSforge, KMS38, and Online KMS activation methods, along with advanced troubleshooting. | 2025-02-23T19:06:50Z |\\n| 42 | [30-seconds-of-code](https://github.com/Chalarangelo/30-seconds-of-code) | 123048 | 12114 | JavaScript | 0 | Coding articles to level up your development skills | 2025-03-13T20:20:17Z |\\n| 43 | [tech-interview-handbook](https://github.com/yangshun/tech-interview-handbook) | 122807 | 15086 | TypeScript | 38 | \ud83d\udcaf Curated coding interview preparation materials for busy software engineers | 2024-10-08T11:04:00Z |\\n| 44 | [awesome-chatgpt-prompts](https://github.com/f/awesome-chatgpt-prompts) | 121521 | 16326 | HTML | 0 | This repo includes ChatGPT prompt curation to use ChatGPT and other LLM tools better. | 2025-03-12T11:28:46Z |\\n| 45 | [react-native](https://github.com/facebook/react-native) | 121029 | 24551 | C++ | 594 | A framework for building native applications using React | 2025-03-14T00:22:27Z |\\n| 46 | [scrcpy](https://github.com/Genymobile/scrcpy) | 118968 | 11245 | C | 2233 | Display and control your Android device | 2025-03-12T08:43:52Z |\\n| 47 | [PowerToys](https://github.com/microsoft/PowerToys) | 116202 | 6848 | C# | 5932 | Windows system utilities to maximize productivity | 2025-03-14T02:37:50Z |\\n| 48 | [electron](https://github.com/electron/electron) | 115829 | 15882 | C++ | 862 | :electron: Build cross-platform desktop apps with JavaScript, HTML, and CSS | 2025-03-14T03:40:26Z |\\n| 49 | [kubernetes](https://github.com/kubernetes/kubernetes) | 113665 | 40405 | Go | 1892 | Production-Grade Container Scheduling and Management | 2025-03-14T03:09:46Z |\\n| 50 | [free-programming-books-zh\\\\_CN](https://github.com/justjavac/free-programming-books-zh_CN) | 112879 | 28270 | None | 0 | \ud83d\udcda \u514d\u8d39\u7684\u8ba1\u7b97\u673a\u7f16\u7a0b\u7c7b\u4e2d\u6587\u4e66\u7c4d\uff0c\u6b22\u8fce\u6295\u7a3f | 2024-07-15T08:55:20Z |\\n| 51 | [node](https://github.com/nodejs/node) | 110121 | 30949 | JavaScript | 1642 | Node.js JavaScript runtime \u2728\ud83d\udc22\ud83d\ude80\u2728 | 2025-03-14T01:41:22Z |\\n| 52 | [hello-algo](https://github.com/krahets/hello-algo) | 110072 | 13699 | Java | 21 | \u300aHello \u7b97\u6cd5\u300b\uff1a\u52a8\u753b\u56fe\u89e3\u3001\u4e00\u952e\u8fd0\u884c\u7684\u6570\u636e\u7ed3\u6784\u4e0e\u7b97\u6cd5\u6559\u7a0b\u3002\u652f\u6301 Python, Java, C++, C, C#, JS, Go, Swift, Rust, Ruby, Kotlin, TS, Dart \u4ee3\u7801\u3002\u7b80\u4f53\u7248\u548c\u7e41\u4f53\u7248\u540c\u6b65\u66f4\u65b0\uff0cEnglish version ongoing | 2025-03-11T08:56:34Z |\\n| 53 | [d3](https://github.com/d3/d3) | 110040 | 22865 | Shell | 8 | Bring data to life with SVG, Canvas and HTML. \ud83d\udcca\ud83d\udcc8\ud83c\udf89 | 2025-03-10T08:22:20Z |\\n| 54 | [axios](https://github.com/axios/axios) | 106511 | 11031 | JavaScript | 565 | Promise based HTTP client for the browser and node.js | 2025-03-14T01:29:41Z |\\n| 55 | [three.js](https://github.com/mrdoob/three.js) | 104937 | 35601 | JavaScript | 438 | JavaScript 3D Library. | 2025-03-14T00:05:43Z |\\n| 56 | [yt-dlp](https://github.com/yt-dlp/yt-dlp) | 104002 | 8156 | Python | 1530 | A feature-rich command-line audio/video downloader | 2025-03-13T04:37:33Z |\\n| 57 | [langchain](https://github.com/langchain-ai/langchain) | 103210 | 16709 | Jupyter Notebook | 335 | \ud83e\udd9c\ud83d\udd17 Build context-aware reasoning applications | 2025-03-14T03:20:21Z |\\n| 58 | [TypeScript](https://github.com/microsoft/TypeScript) | 103170 | 12725 | TypeScript | 5558 | TypeScript is a superset of JavaScript that compiles to clean JavaScript output. | 2025-03-14T02:24:30Z |\\n| 59 | [create-react-app](https://github.com/facebook/create-react-app) | 103108 | 26986 | JavaScript | 1813 | Set up a modern web app by running one command. | 2025-02-15T01:32:11Z |\\n| 60 | [deno](https://github.com/denoland/deno) | 102155 | 5511 | Rust | 1994 | A modern runtime for JavaScript and TypeScript. | 2025-03-13T22:15:57Z |\\n| 61 | [nodebestpractices](https://github.com/goldbergyoni/nodebestpractices) | 102042 | 10357 | Dockerfile | 43 | \u2705 The Node.js best practices list (July 2024) | 2024-07-04T03:41:45Z |\\n| 62 | [rust](https://github.com/rust-lang/rust) | 101948 | 13201 | Rust | 10100 | Empowering everyone to build reliable and efficient software. | 2025-03-14T03:50:14Z |\\n| 63 | [HelloGitHub](https://github.com/521xueweihan/HelloGitHub) | 99651 | 9835 | Python | 197 | :octocat: \u5206\u4eab GitHub \u4e0a\u6709\u8da3\u3001\u5165\u95e8\u7ea7\u7684\u5f00\u6e90\u9879\u76ee\u3002Share interesting, entry-level open source projects on GitHub. | 2025-03-10T10:04:23Z |\\n| 64 | [terminal](https://github.com/microsoft/terminal) | 97381 | 8480 | C++ | 1605 | The new Windows Terminal and the original Windows console host, all in the same place! | 2025-03-14T01:31:40Z |\\n| 65 | [angular](https://github.com/angular/angular) | 97190 | 25978 | TypeScript | 1511 | Deliver web apps with confidence \ud83d\ude80 | 2025-03-13T16:36:59Z |\\n| 66 | [godot](https://github.com/godotengine/godot) | 95123 | 21893 | C++ | 11519 | Godot Engine \u2013 Multi-platform 2D and 3D game engine | 2025-03-14T00:12:26Z |\\n| 67 | [material-ui](https://github.com/mui/material-ui) | 95028 | 32517 | TypeScript | 1686 | Material UI: Comprehensive React component library that implements Google's Material Design. Free forever. | 2025-03-13T18:57:16Z |\\n| 68 | [excalidraw](https://github.com/excalidraw/excalidraw) | 94339 | 9069 | TypeScript | 1665 | Virtual whiteboard for sketching hand-drawn like diagrams | 2025-03-13T08:31:00Z |\\n| 69 | [ant-design](https://github.com/ant-design/ant-design) | 93950 | 51540 | TypeScript | 1223 | An enterprise-class UI design language and React UI library | 2025-03-14T02:51:35Z |\\n| 70 | [free-for-dev](https://github.com/ripienaar/free-for-dev) | 92731 | 10045 | HTML | 0 | A list of SaaS, PaaS and IaaS offerings that have free tiers of interest to devops and infradev | 2025-03-12T12:56:57Z |\\n| 71 | [clean-code-javascript](https://github.com/ryanmcdermott/clean-code-javascript) | 92604 | 12396 | JavaScript | 75 | Clean Code concepts adapted for JavaScript | 2024-07-29T07:24:37Z |\\n| 72 | [DeepSeek-V3](https://github.com/deepseek-ai/DeepSeek-V3) | 92060 | 14924 | Python | 102 | None | 2025-02-24T03:50:20Z |\\n| 73 | [papers-we-love](https://github.com/papers-we-love/papers-we-love) | 91561 | 5862 | Shell | 1 | Papers from the computer science community to read and discuss. | 2025-02-19T01:13:05Z |\\n| 74 | [frp](https://github.com/fatedier/frp) | 91452 | 13788 | Go | 61 | A fast reverse proxy to help you expose a local server behind a NAT or firewall to the internet. | 2025-03-07T09:27:56Z |\\n| 75 | [java-design-patterns](https://github.com/iluwatar/java-design-patterns) | 90993 | 26842 | Java | 127 | Design patterns implemented in Java | 2025-03-11T19:47:43Z |\\n| 76 | [iptv](https://github.com/iptv-org/iptv) | 90948 | 3225 | JavaScript | 304 | Collection of publicly available IPTV channels from all over the world | 2025-03-14T00:10:57Z |\\n| 77 | [thefuck](https://github.com/nvbn/thefuck) | 90758 | 3644 | Python | 277 | Magnificent app which corrects your previous console command. | 2024-07-19T14:56:13Z |\\n| 78 | [tauri](https://github.com/tauri-apps/tauri) | 90450 | 2767 | Rust | 986 | Build smaller, faster, and more secure desktop and mobile applications with a web frontend. | 2025-03-14T03:50:19Z |\\n| 79 | [puppeteer](https://github.com/puppeteer/puppeteer) | 89996 | 9158 | TypeScript | 256 | JavaScript API for Chrome and Firefox | 2025-03-13T17:03:44Z |\\n| 80 | [Awesome-Hacking](https://github.com/Hack-with-Github/Awesome-Hacking) | 89985 | 9164 | None | 0 | A collection of various awesome lists for hackers, pentesters and security researchers | 2025-01-18T01:48:02Z |\\n| 81 | [vue-element-admin](https://github.com/PanJiaChen/vue-element-admin) | 88914 | 30558 | Vue | 1242 | \ud83c\udf89 A magical vue admin <https://panjiachen.github.io/vue-element-admin> | 2024-10-24T11:25:46Z |\\n| 82 | [pytorch](https://github.com/pytorch/pytorch) | 87871 | 23583 | Python | 14655 | Tensors and Dynamic neural networks in Python with strong GPU acceleration | 2025-03-14T04:01:03Z |\\n| 83 | [neovim](https://github.com/neovim/neovim) | 87142 | 5927 | Vim Script | 1559 | Vim-fork focused on extensibility and usability | 2025-03-14T03:36:24Z |\\n| 84 | [every-programmer-should-know](https://github.com/mtdvio/every-programmer-should-know) | 86557 | 7960 | None | 29 | A collection of (mostly) technical things every software developer should know about | 2024-08-06T12:01:28Z |\\n| 85 | [tailwindcss](https://github.com/tailwindlabs/tailwindcss) | 86327 | 4418 | TypeScript | 85 | A utility-first CSS framework for rapid UI development. | 2025-03-14T00:47:38Z |\\n| 86 | [DeepSeek-R1](https://github.com/deepseek-ai/DeepSeek-R1) | 86258 | 11126 | None | 297 | None | 2025-02-24T03:49:25Z |\\n| 87 | [storybook](https://github.com/storybookjs/storybook) | 86091 | 9473 | TypeScript | 2059 | Storybook is the industry standard workshop for building, documenting, and testing UI components in isolation | 2025-03-13T21:01:16Z |\\n| 88 | [Web-Dev-For-Beginners](https://github.com/microsoft/Web-Dev-For-Beginners) | 85556 | 12743 | JavaScript | 57 | 24 Lessons, 12 Weeks, Get Started as a Web Developer | 2025-03-10T20:27:28Z |\\n| 89 | [rustdesk](https://github.com/rustdesk/rustdesk) | 84136 | 11844 | Rust | 48 | An open-source remote desktop application designed for self-hosting, as an alternative to TeamViewer. | 2025-03-13T16:21:05Z |\\n| 90 | [open-webui](https://github.com/open-webui/open-webui) | 83109 | 10027 | JavaScript | 180 | User-friendly AI Interface (Supports Ollama, OpenAI API, ...) | 2025-03-13T14:16:29Z |\\n| 91 | [nvm](https://github.com/nvm-sh/nvm) | 82769 | 8298 | Shell | 305 | Node Version Manager - POSIX-compliant bash script to manage multiple active node.js versions | 2025-03-11T20:43:03Z |\\n| 92 | [django](https://github.com/django/django) | 82702 | 32363 | Python | 0 | The Web framework for perfectionists with deadlines. | 2025-03-13T18:24:11Z |\\n| 93 | [ui](https://github.com/shadcn-ui/ui) | 82672 | 5480 | TypeScript | 827 | A set of beautifully-designed, accessible components and a code distribution platform. Works with your favorite frameworks. Open Source. Open Code. | 2025-03-13T11:03:22Z |\\n| 94 | [app-ideas](https://github.com/florinpop17/app-ideas) | 82534 | 9670 | None | 126 | A Collection of application ideas which can be used to improve your coding skills. | 2024-08-16T09:41:10Z |\\n| 95 | [bitcoin](https://github.com/bitcoin/bitcoin) | 82461 | 36927 | C++ | 398 | Bitcoin Core integration/staging tree | 2025-03-14T03:23:42Z |\\n| 96 | [fastapi](https://github.com/fastapi/fastapi) | 81982 | 7081 | Python | 53 | FastAPI framework, high performance, easy to learn, fast to code, ready for production | 2025-03-10T17:28:24Z |\\n| 97 | [NextChat](https://github.com/ChatGPTNextWeb/NextChat) | 81908 | 61236 | TypeScript | 592 | \u2728 Light and Fast AI Assistant. Support: Web | iOS | MacOS | Android | Linux | Windows | 2025-03-10T10:48:27Z |\\n| 98 | [dify](https://github.com/langgenius/dify) | 81894 | 12016 | TypeScript | 537 | Dify is an open-source LLM app development platform. Dify's intuitive interface combines AI workflow, RAG pipeline, agent capabilities, model management, observability features and more, letting you quickly go from prototype to production. | 2025-03-14T03:28:50Z |\\n| 99 | [svelte](https://github.com/sveltejs/svelte) | 81752 | 4419 | JavaScript | 775 | web development for the rest of us | 2025-03-14T00:30:15Z |\\n| 100 | [animate.css](https://github.com/animate-css/animate.css) | 81416 | 16220 | CSS | 32 | \ud83c\udf7f A cross-browser library of CSS animations. As easy to use as an easy thing. | 2024-07-29T19:34:21Z |\"}]}"}
+
+event: start_of_llm
+data: {"agent_name": "researcher"}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": "###"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": " Problem"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": " Statement"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": "\n\n"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": "\u627e"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": "\u51fa"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": " Github"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": " \u4e0a"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": "\u4e0e"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": " L"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": "LM"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": "\uff08"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": "\u5927\u578b"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": "\u8bed\u8a00"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": "\u6a21\u578b"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": "\uff09"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": "\u76f8\u5173"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": "\u7684"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": "\u9879\u76ee"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": "\u4e2d"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": "\uff0c"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": "star"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": " \u6570"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": "\u6700\u9ad8"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": "\u7684"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": "\u4e09\u4e2a"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": "\u9879\u76ee"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": "\u3002\n\n"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": "###"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": " SEO"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": " Search"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": " Results"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": "\n\n"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": "\u901a\u8fc7"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": "\u641c\u7d22"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": "\uff0c"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": "\u627e"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": "\u5230\u4e86"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": "\u4e00\u4e2a"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": "\u76f8\u5173"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": "\u7684"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": "\u8d44\u6e90"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": "\u94fe\u63a5"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": "\uff0c"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": "\u6307"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": "\u5411"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": "\u4e86"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": "\u4e00\u4e2a"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": " Git"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": "Hub"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": " \u6392"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": "\u884c"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": "\u699c"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": "\u9875\u9762"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": "\uff0c"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": "\u5217"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": "\u51fa\u4e86"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": " Git"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": "Hub"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": " \u4e0a"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": " star"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": " \u6570"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": "\u6700\u9ad8"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": "\u7684"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": "\u9879\u76ee"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": "\u3002\n\n"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": "###"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": " Craw"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": "led"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": " Content"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": "\n\n"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": "\u4ece"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": " ["}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": "Github"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": "-R"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": "anking"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": "/"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": "Top"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": "100"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": "/"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": "Top"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": "-"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": "100"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": "-stars"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": ".md"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": "]("}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": "https"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": "://"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": "github"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": ".com"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": "/E"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": "van"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": "Li"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": "/G"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": "ithub"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": "-R"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": "anking"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": "/blob"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": "/master"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": "/"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": "Top"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": "100"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": "/"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": "Top"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": "-"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": "100"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": "-stars"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": ".md"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": ")"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": " \u9875\u9762"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": "\u4e2d"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": "\uff0c"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": "\u63d0"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": "\u53d6"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": "\u4e86"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": " star"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": " \u6570"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": "\u6700\u9ad8"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": "\u7684"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": "\u9879\u76ee"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": "\u5217\u8868"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": "\u3002"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": "\u4ee5\u4e0b"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": "\u662f"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": "\u4e0e"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": " L"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": "LM"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": " "}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": "\u76f8\u5173"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": "\u7684"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": "\u9879\u76ee"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": "\u4e2d"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": " star"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": " \u6570"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": "\u6700\u9ad8"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": "\u7684"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": "\u4e09\u4e2a"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": "\uff1a\n\n"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": "1"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": "."}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": " **"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": "["}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": "transform"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": "ers"}}
+
+: ping - 2025-03-14 14:58:57.273813+00:00
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": "]("}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": "https"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": "://"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": "github"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": ".com"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": "/h"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": "ug"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": "ging"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": "face"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": "/"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": "transform"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": "ers"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": ")"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": "**\n"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": "  "}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": " -"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": " Stars"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": ":"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": " "}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": "141"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": ","}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": "173"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": "\n"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": "  "}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": " -"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": " \u63cf"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": "\u8ff0"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": ":"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": " \ud83e\udd17"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": " Transformers"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": ":"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": " State"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": "-of"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": "-the"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": "-art"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": " Machine"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": " Learning"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": " for"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": " P"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": "ytorch"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": ","}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": " Tensor"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": "Flow"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": ","}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": " and"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": " J"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": "AX"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": ".\n\n"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": "2"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": "."}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": " **"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": "["}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": "lang"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": "chain"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": "]("}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": "https"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": "://"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": "github"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": ".com"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": "/lang"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": "chain"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": "-ai"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": "/lang"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": "chain"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": ")"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": "**\n"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": "  "}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": " -"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": " Stars"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": ":"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": " "}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": "103"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": ","}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": "210"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": "\n"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": "  "}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": " -"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": " \u63cf"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": "\u8ff0"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": ":"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": " \ud83e\udd9c"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": "\ud83d\udd17"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": " Build"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": " context"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": "-aware"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": " reasoning"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": " applications"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": ".\n\n"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": "3"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": "."}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": " **"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": "["}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": "oll"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": "ama"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": "]("}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": "https"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": "://"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": "github"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": ".com"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": "/"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": "oll"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": "ama"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": "/"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": "oll"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": "ama"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": ")"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": "**\n"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": "  "}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": " -"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": " Stars"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": ":"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": " "}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": "132"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": ","}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": "789"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": "\n"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": "  "}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": " -"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": " \u63cf"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": "\u8ff0"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": ":"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": " Get"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": " up"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": " and"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": " running"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": " with"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": " L"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": "lama"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": " "}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": "3"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": "."}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": "3"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": ","}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": " Deep"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": "Seek"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": "-R"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": "1"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": ","}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": " Phi"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": "-"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": "4"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": ","}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": " Gem"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": "ma"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": " "}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": "3"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": ","}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": " and"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": " other"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": " large"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": " language"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": " models"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": ".\n\n"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": "###"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": " Conclusion"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": "\n\n"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": "\u5728"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": " Git"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": "Hub"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": " \u4e0a"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": "\u4e0e"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": " L"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": "LM"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": " "}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": "\u76f8\u5173"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": "\u7684"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": "\u9879\u76ee"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": "\u4e2d"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": "\uff0c"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": "star"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": " \u6570"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": "\u6700\u9ad8"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": "\u7684"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": "\u4e09\u4e2a"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": "\u9879\u76ee"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": "\u5206\u522b"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": "\u662f"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": "\uff1a\n\n"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": "1"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": "."}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": " **"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": "Transform"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": "ers"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": "**"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": " -"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": " \u63d0"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": "\u4f9b"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": "\u6700"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": "\u5148\u8fdb"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": "\u7684"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": "\u673a\u5668"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": "\u5b66\u4e60"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": "\u6a21\u578b"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": "\uff0c"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": "\u652f\u6301"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": " P"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": "ytorch"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": "\u3001"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": "Tensor"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": "Flow"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": " \u548c"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": " J"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": "AX"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": "\u3002\n"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": "2"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": "."}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": " **"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": "Lang"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": "chain"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": "**"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": " -"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": " \u7528"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": "\u4e8e"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": "\u6784"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": "\u5efa"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": "\u4e0a\u4e0b"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": "\u6587"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": "\u611f"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": "\u77e5"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": "\u7684"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": "\u63a8"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": "\u7406"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": "\u5e94\u7528"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": "\u7a0b\u5e8f"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": "\u3002\n"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": "3"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": "."}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": " **"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": "O"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": "ll"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": "ama"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": "**"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": " -"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": " \u63d0"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": "\u4f9b"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": " L"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": "lama"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": " "}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": "3"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": "."}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": "3"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": "\u3001"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": "Deep"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": "Seek"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": "-R"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": "1"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": "\u3001"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": "Phi"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": "-"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": "4"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": "\u3001"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": "Gem"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": "ma"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": " "}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": "3"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": " \u7b49"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": "\u5927\u578b"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": "\u8bed\u8a00"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": "\u6a21\u578b"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": "\u7684"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": "\u652f\u6301"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": "\u3002\n\n"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": "\u8fd9\u4e9b"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": "\u9879\u76ee"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": "\u5728"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": " L"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": "LM"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": " "}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": "\u9886\u57df"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": "\u4e2d"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": "\u5177\u6709"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": "\u5f88"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": "\u9ad8"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": "\u7684"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": "\u5f71\u54cd"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": "\u529b"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": "\u548c"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": "\u5e7f"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": "\u6cdb"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": "\u7684"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": "\u5e94\u7528"}}
+
+event: message
+data: {"message_id": "run-a995aab3-cb87-4afe-bcb3-5e99f81b581f", "delta": {"content": "\u3002"}}
+
+event: end_of_llm
+data: {"agent_name": "researcher"}
+
+event: end_of_agent
+data: {"agent_name": "researcher", "agent_id": "a18a0969-535a-4722-9ea0-f8d576d8ade1_researcher"}
+
+event: end_of_workflow
+data: {"workflow_id": "a18a0969-535a-4722-9ea0-f8d576d8ade1"}

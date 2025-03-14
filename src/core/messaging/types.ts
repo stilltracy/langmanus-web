@@ -1,8 +1,10 @@
+import { type Workflow } from "../workflow";
+
 export type MessageRole = "user" | "assistant";
 
-export interface BaseMessage<
+interface GenericMessage<
   T extends string,
-  C extends Record<string, unknown>,
+  C extends Record<string, unknown> | string,
 > {
   id: string;
   role: MessageRole;
@@ -10,6 +12,9 @@ export interface BaseMessage<
   content: C;
 }
 
-export interface TextMessage extends BaseMessage<"text", { text: string }> {}
+export interface TextMessage extends GenericMessage<"text", string> {}
 
-export type Message = TextMessage;
+export interface WorkflowMessage
+  extends GenericMessage<"workflow", { workflow: Workflow }> {}
+
+export type Message = TextMessage | WorkflowMessage;

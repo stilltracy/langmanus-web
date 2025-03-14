@@ -1,7 +1,7 @@
 import Markdown from "react-markdown";
 
 import { type Message } from "~/core/messaging";
-import { cn } from "~/core/utils/classnames";
+import { cn } from "~/core/utils";
 
 import { LoadingAnimation } from "./LoadingAnimation";
 
@@ -37,7 +37,7 @@ function MessageView({ message }: { message: Message }) {
             ),
           }}
         >
-          {message.content.text}
+          {message.content}
         </Markdown>
       </div>
     );

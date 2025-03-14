@@ -1,6 +1,6 @@
 import ReactMarkdown, { type Options } from "react-markdown";
 
-import { cn } from "~/core/utils/classnames";
+import { cn } from "~/core/utils";
 
 export function Markdown({
   className,

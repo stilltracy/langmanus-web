@@ -1,7 +1,7 @@
 import { ArrowUpOutlined } from "@ant-design/icons";
 import { type KeyboardEvent, useCallback, useState } from "react";
 
-import { cn } from "~/core/utils/classnames";
+import { cn } from "~/core/utils";
 
 export function InputBox({
   className,

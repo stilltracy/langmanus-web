@@ -1,14 +1,10 @@
 import { nanoid } from "nanoid";
 import { create } from "zustand";
 
-import { chatStream } from "../api/mock";
+import { ChatEvent, chatStream } from "../api";
+import { chatStream as mockChatStream } from "../api/mock";
 import { type WorkflowMessage, type Message } from "../messaging";
-import {
-  type WorkflowStep,
-  type Workflow,
-  type WorkflowTask,
-  WorkflowEngine,
-} from "../workflow";
+import { WorkflowEngine } from "../workflow";
 
 export const useStore = create<{
   messages: Message[];
@@ -44,7 +40,12 @@ export function updateMessage(message: Partial<Message> & { id: string }) {
 
 export async function sendMessage(message: Message) {
   addMessage(message);
-  const stream = chatStream(message);
+  let stream: AsyncIterable<ChatEvent>;
+  if (window.location.search.includes("mock")) {
+    stream = mockChatStream(message);
+  } else {
+    stream = chatStream(message);
+  }
   setResponding(true);
   for await (const event of stream) {
     switch (event.type) {

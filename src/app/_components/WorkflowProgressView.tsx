@@ -28,8 +28,10 @@ export function WorkflowProgressView({
         <ul className="flex flex-col gap-4">
           {workflow.steps.map((step, stepIndex) => (
             <li key={step.id} className="flex flex-col gap-2">
-              <h3 className="text-lg font-bold">{getStepName(step)} Step</h3>
-              <ul className="flex flex-col gap-4">
+              <h3 className="ml-[-4px] text-lg font-bold">
+                📍 Step {stepIndex + 1}: {getStepName(step)}
+              </h3>
+              <ul className="flex flex-col gap-2">
                 {step.tasks
                   .filter(
                     (task) =>
@@ -38,7 +40,9 @@ export function WorkflowProgressView({
                   .map((task) => (
                     <li key={task.id} className="flex">
                       {task.type === "thinking" ? (
-                        <Markdown>{task.payload.text}</Markdown>
+                        <Markdown className="pl-6 text-sm opacity-70">
+                          {task.payload.text}
+                        </Markdown>
                       ) : (
                         <ToolCallView task={task} />
                       )}

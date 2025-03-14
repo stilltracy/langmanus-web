@@ -3,7 +3,7 @@ import { timeout } from "../utils";
 
 import { type ChatEvent } from "./types";
 
-import mock from "./mock.txt";
+import mock from "./mock-2.txt";
 
 export async function* chatStream(
   userMessage: Message,

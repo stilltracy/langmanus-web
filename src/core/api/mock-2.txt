@@ -1,0 +1,202 @@
+event: start_of_workflow
+data: {"workflow_id": "e93603ea-ee0e-4fe1-b811-1873858aeb31", "input": [{"role": "user", "content": "\u53bb\u767e\u5ea6\u4e00\u4e0b\u4eca\u5929\u7684\u5929\u6c14\u60c5\u51b5"}]}
+
+event: start_of_agent
+data: {"agent_name": "browser", "agent_id": "e93603ea-ee0e-4fe1-b811-1873858aeb31_browser"}
+
+event: start_of_llm
+data: {"agent_name": "browser"}
+
+event: end_of_llm
+data: {"agent_name": "browser"}
+
+event: tool_call
+data: {"tool_call_id": "e93603ea-ee0e-4fe1-b811-1873858aeb31_browser_browser_2", "tool_name": "browser", "tool_input": {"instruction": "Go to baidu.com and search for today's weather"}}
+
+event: start_of_llm
+data: {"agent_name": "browser"}
+
+event: end_of_llm
+data: {"agent_name": "browser"}
+
+event: start_of_llm
+data: {"agent_name": "browser"}
+
+event: end_of_llm
+data: {"agent_name": "browser"}
+
+: ping - 2025-03-14 15:26:15.475386+00:00
+
+event: start_of_llm
+data: {"agent_name": "browser"}
+
+event: end_of_llm
+data: {"agent_name": "browser"}
+
+event: tool_call_result
+data: {"tool_call_id": "e93603ea-ee0e-4fe1-b811-1873858aeb31_browser_browser_2", "tool_name": "browser", "tool_result": "<bound method AgentHistoryList.final_result of AgentHistoryList(all_results=[ActionResult(is_done=False, extracted_content='\ud83d\udd17  Navigated to https://www.baidu.com', error=None, include_in_memory=True), ActionResult(is_done=False, extracted_content='\u2328\ufe0f  Input \"\u4eca\u65e5\u5929\u6c14\" into index 12', error=None, include_in_memory=True), ActionResult(is_done=True, extracted_content=\"Today's weather is displayed on Baidu. The temperature is 8\u00b0C with fog and a north wind at 3 levels. The temperature range is 8~12\u00b0C with an air quality index of 32, which is considered good.\", error=None, include_in_memory=False)], all_model_outputs=[{'go_to_url': {'url': 'https://www.baidu.com'}}, {'input_text': {'index': 12, 'text': '\u4eca\u65e5\u5929\u6c14'}}, {'click_element': {'index': 13}}, {'done': {'text': \"Today's weather is displayed on Baidu. The temperature is 8\u00b0C with fog and a north wind at 3 levels. The temperature range is 8~12\u00b0C with an air quality index of 32, which is considered good.\"}}])>"}
+
+event: start_of_llm
+data: {"agent_name": "browser"}
+
+event: message
+data: {"message_id": "run-a3908ff9-6423-49fa-894f-8938e63df74d", "delta": {"content": "I"}}
+
+event: message
+data: {"message_id": "run-a3908ff9-6423-49fa-894f-8938e63df74d", "delta": {"content": " went"}}
+
+event: message
+data: {"message_id": "run-a3908ff9-6423-49fa-894f-8938e63df74d", "delta": {"content": " to"}}
+
+event: message
+data: {"message_id": "run-a3908ff9-6423-49fa-894f-8938e63df74d", "delta": {"content": " Ba"}}
+
+event: message
+data: {"message_id": "run-a3908ff9-6423-49fa-894f-8938e63df74d", "delta": {"content": "idu"}}
+
+event: message
+data: {"message_id": "run-a3908ff9-6423-49fa-894f-8938e63df74d", "delta": {"content": " and"}}
+
+event: message
+data: {"message_id": "run-a3908ff9-6423-49fa-894f-8938e63df74d", "delta": {"content": " searched"}}
+
+event: message
+data: {"message_id": "run-a3908ff9-6423-49fa-894f-8938e63df74d", "delta": {"content": " for"}}
+
+event: message
+data: {"message_id": "run-a3908ff9-6423-49fa-894f-8938e63df74d", "delta": {"content": " today's"}}
+
+event: message
+data: {"message_id": "run-a3908ff9-6423-49fa-894f-8938e63df74d", "delta": {"content": " weather"}}
+
+event: message
+data: {"message_id": "run-a3908ff9-6423-49fa-894f-8938e63df74d", "delta": {"content": "."}}
+
+event: message
+data: {"message_id": "run-a3908ff9-6423-49fa-894f-8938e63df74d", "delta": {"content": " The"}}
+
+event: message
+data: {"message_id": "run-a3908ff9-6423-49fa-894f-8938e63df74d", "delta": {"content": " temperature"}}
+
+event: message
+data: {"message_id": "run-a3908ff9-6423-49fa-894f-8938e63df74d", "delta": {"content": " is"}}
+
+event: message
+data: {"message_id": "run-a3908ff9-6423-49fa-894f-8938e63df74d", "delta": {"content": " "}}
+
+event: message
+data: {"message_id": "run-a3908ff9-6423-49fa-894f-8938e63df74d", "delta": {"content": "8"}}
+
+event: message
+data: {"message_id": "run-a3908ff9-6423-49fa-894f-8938e63df74d", "delta": {"content": "\u00b0C"}}
+
+event: message
+data: {"message_id": "run-a3908ff9-6423-49fa-894f-8938e63df74d", "delta": {"content": " with"}}
+
+event: message
+data: {"message_id": "run-a3908ff9-6423-49fa-894f-8938e63df74d", "delta": {"content": " fog"}}
+
+event: message
+data: {"message_id": "run-a3908ff9-6423-49fa-894f-8938e63df74d", "delta": {"content": " and"}}
+
+event: message
+data: {"message_id": "run-a3908ff9-6423-49fa-894f-8938e63df74d", "delta": {"content": " a"}}
+
+event: message
+data: {"message_id": "run-a3908ff9-6423-49fa-894f-8938e63df74d", "delta": {"content": " north"}}
+
+event: message
+data: {"message_id": "run-a3908ff9-6423-49fa-894f-8938e63df74d", "delta": {"content": " wind"}}
+
+event: message
+data: {"message_id": "run-a3908ff9-6423-49fa-894f-8938e63df74d", "delta": {"content": " at"}}
+
+event: message
+data: {"message_id": "run-a3908ff9-6423-49fa-894f-8938e63df74d", "delta": {"content": " "}}
+
+event: message
+data: {"message_id": "run-a3908ff9-6423-49fa-894f-8938e63df74d", "delta": {"content": "3"}}
+
+event: message
+data: {"message_id": "run-a3908ff9-6423-49fa-894f-8938e63df74d", "delta": {"content": " levels"}}
+
+event: message
+data: {"message_id": "run-a3908ff9-6423-49fa-894f-8938e63df74d", "delta": {"content": "."}}
+
+event: message
+data: {"message_id": "run-a3908ff9-6423-49fa-894f-8938e63df74d", "delta": {"content": " The"}}
+
+event: message
+data: {"message_id": "run-a3908ff9-6423-49fa-894f-8938e63df74d", "delta": {"content": " temperature"}}
+
+event: message
+data: {"message_id": "run-a3908ff9-6423-49fa-894f-8938e63df74d", "delta": {"content": " range"}}
+
+event: message
+data: {"message_id": "run-a3908ff9-6423-49fa-894f-8938e63df74d", "delta": {"content": " is"}}
+
+event: message
+data: {"message_id": "run-a3908ff9-6423-49fa-894f-8938e63df74d", "delta": {"content": " "}}
+
+event: message
+data: {"message_id": "run-a3908ff9-6423-49fa-894f-8938e63df74d", "delta": {"content": "8"}}
+
+event: message
+data: {"message_id": "run-a3908ff9-6423-49fa-894f-8938e63df74d", "delta": {"content": "~"}}
+
+event: message
+data: {"message_id": "run-a3908ff9-6423-49fa-894f-8938e63df74d", "delta": {"content": "12"}}
+
+event: message
+data: {"message_id": "run-a3908ff9-6423-49fa-894f-8938e63df74d", "delta": {"content": "\u00b0C"}}
+
+event: message
+data: {"message_id": "run-a3908ff9-6423-49fa-894f-8938e63df74d", "delta": {"content": " with"}}
+
+event: message
+data: {"message_id": "run-a3908ff9-6423-49fa-894f-8938e63df74d", "delta": {"content": " an"}}
+
+event: message
+data: {"message_id": "run-a3908ff9-6423-49fa-894f-8938e63df74d", "delta": {"content": " air"}}
+
+event: message
+data: {"message_id": "run-a3908ff9-6423-49fa-894f-8938e63df74d", "delta": {"content": " quality"}}
+
+event: message
+data: {"message_id": "run-a3908ff9-6423-49fa-894f-8938e63df74d", "delta": {"content": " index"}}
+
+event: message
+data: {"message_id": "run-a3908ff9-6423-49fa-894f-8938e63df74d", "delta": {"content": " of"}}
+
+event: message
+data: {"message_id": "run-a3908ff9-6423-49fa-894f-8938e63df74d", "delta": {"content": " "}}
+
+event: message
+data: {"message_id": "run-a3908ff9-6423-49fa-894f-8938e63df74d", "delta": {"content": "32"}}
+
+event: message
+data: {"message_id": "run-a3908ff9-6423-49fa-894f-8938e63df74d", "delta": {"content": ","}}
+
+event: message
+data: {"message_id": "run-a3908ff9-6423-49fa-894f-8938e63df74d", "delta": {"content": " which"}}
+
+event: message
+data: {"message_id": "run-a3908ff9-6423-49fa-894f-8938e63df74d", "delta": {"content": " is"}}
+
+event: message
+data: {"message_id": "run-a3908ff9-6423-49fa-894f-8938e63df74d", "delta": {"content": " considered"}}
+
+event: message
+data: {"message_id": "run-a3908ff9-6423-49fa-894f-8938e63df74d", "delta": {"content": " good"}}
+
+event: message
+data: {"message_id": "run-a3908ff9-6423-49fa-894f-8938e63df74d", "delta": {"content": "."}}
+
+event: end_of_llm
+data: {"agent_name": "browser"}
+
+event: end_of_agent
+data: {"agent_name": "browser", "agent_id": "e93603ea-ee0e-4fe1-b811-1873858aeb31_browser"}
+
+event: end_of_workflow
+data: {"workflow_id": "e93603ea-ee0e-4fe1-b811-1873858aeb31"}

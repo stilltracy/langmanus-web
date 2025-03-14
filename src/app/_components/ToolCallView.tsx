@@ -11,9 +11,30 @@ export function ToolCallView({ task }: { task: ToolCallTask }) {
   if (task.payload.toolName === "tavily_search") {
     return <TravilySearchToolCallView task={task as ToolCallTask<any>} />;
   } else if (task.payload.toolName === "crawl_tool") {
-    return <CrawlToolCallView task={task as ToolCallTask<{ url: string }>} />;
+    return <CrawlToolCallView task={task as ToolCallTask<any>} />;
+  } else if (task.payload.toolName === "browser") {
+    return <BrowserToolCallView task={task as ToolCallTask<any>} />;
   }
   return <div>{task.payload.toolName}</div>;
+}
+
+function BrowserToolCallView({
+  task,
+}: {
+  task: ToolCallTask<{ instruction: string }>;
+}) {
+  return (
+    <div>
+      <div className="flex items-center gap-2">
+        <div>
+          <GlobalOutlined className="h-4 w-4 text-sm" />
+        </div>
+        <div>
+          <span className="text-sm">{task.payload.input.instruction}</span>
+        </div>
+      </div>
+    </div>
+  );
 }
 
 function CrawlToolCallView({ task }: { task: ToolCallTask<{ url: string }> }) {

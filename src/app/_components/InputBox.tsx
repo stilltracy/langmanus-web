@@ -52,7 +52,7 @@ export function InputBox({
       <div className="flex items-center justify-end px-2 py-2">
         <button
           title="Send"
-          className="h-10 w-10 rounded-full bg-[#f9f8f6] text-gray-500 transition-shadow hover:bg-gray-100 hover:shadow"
+          className="bg-button text-button hover:bg-button-hover hover:text-button-hover h-10 w-10 rounded-full transition-shadow hover:shadow"
           onClick={sendMessage}
         >
           <ArrowUpOutlined />

@@ -1,9 +1,6 @@
-export interface StreamEvent {
-  type: "message";
-  data: string;
-}
+import { type StreamEvent } from "./StreamEvent";
 
-export async function* fetchStreamEvents(
+export async function* fetchStream(
   url: string,
   init: RequestInit,
 ): AsyncIterable<StreamEvent> {
@@ -33,13 +30,16 @@ export async function* fetchStreamEvents(
     }
     buffer += value;
     while (true) {
-      const index = buffer.indexOf("\n\n");
+      const index = buffer.indexOf("\r\n\r\n");
       if (index === -1) {
         break;
       }
       const chunk = buffer.slice(0, index);
       buffer = buffer.slice(index + 2);
-      yield parseEvent(chunk);
+      const event = parseEvent(chunk);
+      if (event) {
+        yield event;
+      }
     }
   }
 }
@@ -49,16 +49,21 @@ function parseEvent(chunk: string) {
     type: "message",
     data: "",
   };
-  for (const line of chunk.split("\n")) {
+  for (const line of chunk.split("\r\n")) {
     const pos = line.indexOf(": ");
     if (pos === -1) {
       continue;
     }
     const key = line.slice(0, pos);
     const value = line.slice(pos + 2);
-    if (key === "data") {
+    if (key === "event") {
+      result.type = value;
+    } else if (key === "data") {
       result.data = value;
     }
+  }
+  if (result.type === "message" && result.data === "") {
+    return undefined;
   }
   return result;
 }

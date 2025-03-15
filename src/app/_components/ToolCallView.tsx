@@ -1,9 +1,12 @@
 import {
   GlobalOutlined,
+  PythonOutlined,
   SearchOutlined,
   UnorderedListOutlined,
 } from "@ant-design/icons";
 import { useMemo } from "react";
+import SyntaxHighlighter from "react-syntax-highlighter";
+import { docco } from "react-syntax-highlighter/dist/esm/styles/hljs";
 
 import { type ToolCallTask } from "~/core/workflow";
 
@@ -14,6 +17,10 @@ export function ToolCallView({ task }: { task: ToolCallTask }) {
     return <CrawlToolCallView task={task as ToolCallTask<any>} />;
   } else if (task.payload.toolName === "browser") {
     return <BrowserToolCallView task={task as ToolCallTask<any>} />;
+  } else if (task.payload.toolName === "python_repl_tool") {
+    return <PythonReplToolCallView task={task as ToolCallTask<any>} />;
+  } else if (task.payload.toolName === "bash_tool") {
+    return <BashToolCallView task={task as ToolCallTask<any>} />;
   }
   return <div>{task.payload.toolName}</div>;
 }
@@ -127,6 +134,59 @@ function TravilySearchToolCallView({
               </li>
             ))}
           </ul>
+        </div>
+      )}
+    </div>
+  );
+}
+
+function PythonReplToolCallView({
+  task,
+}: {
+  task: ToolCallTask<{ code: string }>;
+}) {
+  return (
+    <div>
+      <div className="flex items-center gap-2">
+        <div>
+          <PythonOutlined className="h-4 w-4 text-sm" />
+        </div>
+        <div>
+          <span>Writing and executing Python Code</span>
+        </div>
+      </div>
+      {task.payload.input.code && (
+        <div className="min-w[640px] mx-4 mt-2 max-h-[420px] max-w-[640px] overflow-auto rounded-lg border bg-gray-50 p-2">
+          <SyntaxHighlighter language="python" style={docco}>
+            {task.payload.input.code}
+          </SyntaxHighlighter>
+        </div>
+      )}
+    </div>
+  );
+}
+
+function BashToolCallView({ task }: { task: ToolCallTask<{ cmd: string }> }) {
+  return (
+    <div>
+      <div className="flex items-center gap-2">
+        <div>
+          <PythonOutlined className="h-4 w-4 text-sm" />
+        </div>
+        <div>
+          <span>
+            Executing <a className="font-medium">Bash Command</a>
+          </span>
+        </div>
+      </div>
+      {task.payload.input.cmd && (
+        <div
+          className="min-w[640px] mx-4 mt-2 max-h-[420px] max-w-[640px] overflow-auto rounded-lg border bg-gray-50 p-2"
+          style={{ fontSize: "smaller" }}
+        >
+          <SyntaxHighlighter language="bash" style={docco}>
+            {task.payload.input.cmd}
+          </SyntaxHighlighter>
         </div>
       )}
     </div>

@@ -40,7 +40,12 @@ export function WorkflowProgressView({
                   .map((task) => (
                     <li key={task.id} className="flex">
                       {task.type === "thinking" ? (
-                        <Markdown className="pl-6 text-sm opacity-70">
+                        <Markdown
+                          className="pl-6 opacity-70"
+                          style={{
+                            fontSize: "smaller",
+                          }}
+                        >
                           {task.payload.text}
                         </Markdown>
                       ) : (

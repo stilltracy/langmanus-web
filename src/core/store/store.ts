@@ -1,10 +1,10 @@
-import { nanoid } from "nanoid";
 import { create } from "zustand";
 
 import { ChatEvent, chatStream } from "../api";
 import { chatStream as mockChatStream } from "../api/mock";
 import { type WorkflowMessage, type Message } from "../messaging";
 import { WorkflowEngine } from "../workflow";
+import { clone } from "../utils";
 
 export const useStore = create<{
   messages: Message[];
@@ -25,9 +25,10 @@ export function updateMessage(message: Partial<Message> & { id: string }) {
     if (index === -1) {
       return state;
     }
-    const newMessage = JSON.parse(
-      JSON.stringify({ ...state.messages[index], ...message }),
-    ) as Message;
+    const newMessage = clone({
+      ...state.messages[index],
+      ...message,
+    } as Message);
     return {
       messages: [
         ...state.messages.slice(0, index),

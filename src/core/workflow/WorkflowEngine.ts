@@ -60,7 +60,7 @@ export class WorkflowEngine {
           break;
         case "tool_call":
           currentToolCallTask = {
-            id: event.data.tool_call_id,
+            id: nanoid(),
             type: "tool_call",
             state: "pending",
             payload: {
@@ -78,6 +78,8 @@ export class WorkflowEngine {
           break;
         case "end_of_workflow":
           return;
+        default:
+          break;
       }
     }
   }

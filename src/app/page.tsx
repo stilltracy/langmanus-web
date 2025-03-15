@@ -51,13 +51,14 @@ export default function HomePage() {
               </div>
             </div>
           )}
-          <div className="flex flex-col overflow-hidden rounded-[24px] border bg-white shadow">
+          <div className="flex flex-col overflow-hidden rounded-[24px] border bg-white shadow-lg">
             <InputBox
               size={messages.length === 0 ? "large" : "normal"}
               onSend={handleSendMessage}
               disabled={responding}
             />
           </div>
+          <div className="w-page absolute bottom-[-32px] h-8 backdrop-blur-sm" />
         </footer>
       </div>
     </div>

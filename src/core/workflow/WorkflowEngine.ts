@@ -22,7 +22,6 @@ export class WorkflowEngine {
     let currentThinkingTask: ThinkingTask | null = null;
 
     for await (const event of stream) {
-      console.info(event.type);
       switch (event.type) {
         case "start_of_agent":
           currentStep = {

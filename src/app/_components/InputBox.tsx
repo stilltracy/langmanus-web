@@ -68,12 +68,15 @@ export function InputBox({
       <div className="flex items-center justify-end px-2 py-2">
         <button
           title={responding ? "Cancel" : "Send"}
-          className="bg-button text-button hover:bg-button-hover hover:text-button-hover h-10 w-10 rounded-full transition-shadow hover:shadow"
+          className={cn(
+            "text-button hover:bg-button-hover hover:text-button-hover h-10 w-10 rounded-full transition-shadow hover:shadow",
+            responding ? "bg-button-hover" : "bg-button",
+          )}
           onClick={handleSendMessage}
         >
           {responding ? (
             <div className="flex h-10 w-10 items-center justify-center">
-              <div className="h-4 w-4 rounded bg-gray-300" />
+              <div className="h-4 w-4 rounded bg-red-300" />
             </div>
           ) : (
             <ArrowUpOutlined />

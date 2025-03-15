@@ -64,8 +64,10 @@ export class WorkflowEngine {
           yield this.workflow;
           break;
         case "end_of_llm":
-          currentThinkingTask!.state = "success";
-          currentThinkingTask = null;
+          if (currentThinkingTask) {
+            currentThinkingTask.state = "success";
+            currentThinkingTask = null;
+          }
           yield this.workflow;
           break;
         case "message":

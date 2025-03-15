@@ -8,6 +8,7 @@ import { sendMessage, useStore } from "~/core/store";
 import { AppHeader } from "./_components/AppHeader";
 import { InputBox } from "./_components/InputBox";
 import { MessageHistoryView } from "./_components/MessageHistoryView";
+import { cn } from "~/core/utils";
 
 export default function HomePage() {
   const messages = useStore((state) => state.messages);
@@ -22,15 +23,39 @@ export default function HomePage() {
   }, []);
   return (
     <div className="flex w-full flex-col items-center justify-center">
-      <div className="min-w-page min-h-screen">
+      <div className="min-w-page flex min-h-screen flex-col items-center">
         <header className="fixed left-0 right-0 top-0 flex h-16 w-full items-center px-4">
           <AppHeader />
         </header>
         <main className="mb-48 mt-16 px-4">
-          <MessageHistoryView messages={messages} loading={responding} />
+          <MessageHistoryView
+            className="w-page"
+            messages={messages}
+            loading={responding}
+          />
         </main>
-        <footer className="w-page fixed bottom-4 flex flex-col overflow-hidden rounded-[24px] border bg-white shadow">
-          <InputBox onSend={handleSendMessage} />
+        {messages.length === 0 && (
+          <div className="flex w-[640px] translate-y-[-5vh] flex-col">
+            <h3 className="mb-2 text-center text-3xl font-medium">
+              👋 Hello, there!
+            </h3>
+            <div className="px-4 text-center text-lg text-gray-400">
+              LangManus, built on cutting-edge language models, helps you search
+              on web, browse information, and handle complex tasks.
+            </div>
+          </div>
+        )}
+        <footer
+          className={cn(
+            "fixed bottom-4 flex flex-col overflow-hidden rounded-[24px] border bg-white shadow transition-transform duration-500 ease-in-out",
+            messages.length === 0 ? "w-[640px] translate-y-[-34vh]" : "w-page",
+          )}
+        >
+          <InputBox
+            size={messages.length === 0 ? "large" : "normal"}
+            onSend={handleSendMessage}
+            disabled={responding}
+          />
         </footer>
       </div>
     </div>

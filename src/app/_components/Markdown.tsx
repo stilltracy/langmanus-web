@@ -5,10 +5,11 @@ import { cn } from "~/core/utils";
 export function Markdown({
   className,
   children,
+  style,
   ...props
-}: Options & { className?: string }) {
+}: Options & { className?: string; style?: React.CSSProperties }) {
   return (
-    <div className={cn(className, "markdown")}>
+    <div className={cn(className, "markdown")} style={style}>
       <ReactMarkdown
         components={{
           a: ({ href, children }) => (

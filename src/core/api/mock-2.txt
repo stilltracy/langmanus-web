@@ -198,5 +198,17 @@ data: {"agent_name": "browser"}
 event: end_of_agent
 data: {"agent_name": "browser", "agent_id": "e93603ea-ee0e-4fe1-b811-1873858aeb31_browser"}
 
+event: start_of_agent
+data: {"agent_name": "reporter", "agent_id": "e93603ea-ee0e-4fe1-b811-1873858aeb31_browser"}
+
+event: start_of_llm
+data: {"agent_name": "reporter"}
+
+event: end_of_llm
+data: {"agent_name": "reporter"}
+
+event: end_of_agent
+data: {"agent_name": "reporter", "agent_id": "e93603ea-ee0e-4fe1-b811-1873858aeb31_browser"}
+
 event: end_of_workflow
 data: {"workflow_id": "e93603ea-ee0e-4fe1-b811-1873858aeb31"}

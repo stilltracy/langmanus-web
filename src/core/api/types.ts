@@ -3,6 +3,12 @@ export interface GenericChatEvent<T extends string, D extends object> {
   data: D;
 }
 
+export interface StartOfReportEvent
+  extends GenericChatEvent<"start_of_report", { report_id: string }> {}
+
+export interface EndOfReportEvent
+  extends GenericChatEvent<"end_of_report", { report_id: string }> {}
+
 export interface StartOfWorkflowEvent
   extends GenericChatEvent<
     "start_of_workflow",
@@ -46,6 +52,8 @@ export interface MessageEvent
   > {}
 
 export type ChatEvent =
+  | StartOfReportEvent
+  | EndOfReportEvent
   | StartOfWorkflowEvent
   | EndOfWorkflowEvent
   | StartOfAgentEvent

@@ -16,7 +16,10 @@ export interface StartOfWorkflowEvent
   > {}
 
 export interface EndOfWorkflowEvent
-  extends GenericChatEvent<"end_of_workflow", { workflow_id: string }> {}
+  extends GenericChatEvent<
+    "end_of_workflow",
+    { workflow_id: string; messages: { role: string; content: string }[] }
+  > {}
 
 export interface StartOfAgentEvent
   extends GenericChatEvent<

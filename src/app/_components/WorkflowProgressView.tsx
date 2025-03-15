@@ -25,7 +25,19 @@ export function WorkflowProgressView({
           <div className="flex-shrink-0 px-4 py-4 font-medium">Flow</div>
           <ol className="flex flex-grow list-disc flex-col gap-4 px-4 py-2">
             {steps.map((step) => (
-              <li key={step.id} className="flex items-center gap-2">
+              <li
+                key={step.id}
+                className="flex cursor-pointer items-center gap-2"
+                onClick={() => {
+                  const element = document.getElementById(step.id);
+                  if (element) {
+                    element.scrollIntoView({
+                      behavior: "smooth",
+                      block: "center",
+                    });
+                  }
+                }}
+              >
                 <div className="flex h-2 w-2 rounded-full bg-gray-400"></div>
                 <div>{getStepName(step)}</div>
               </li>
@@ -36,7 +48,7 @@ export function WorkflowProgressView({
           <ul className="flex flex-col gap-4">
             {steps.map((step, stepIndex) => (
               <li key={step.id} className="flex flex-col gap-2">
-                <h3 className="ml-[-4px] text-lg font-bold">
+                <h3 id={step.id} className="ml-[-4px] text-lg font-bold">
                   📍 Step {stepIndex + 1}: {getStepName(step)}
                 </h3>
                 <ul className="flex flex-col gap-2">

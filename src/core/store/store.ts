@@ -9,9 +9,15 @@ import { clone } from "../utils";
 export const useStore = create<{
   messages: Message[];
   responding: boolean;
+  state: {
+    messages: { role: string; content: string }[];
+  };
 }>(() => ({
   messages: [],
   responding: false,
+  state: {
+    messages: [],
+  },
 }));
 
 export function addMessage(message: Message) {
@@ -48,7 +54,7 @@ export async function sendMessage(
   if (window.location.search.includes("mock")) {
     stream = mockChatStream(message);
   } else {
-    stream = chatStream(message, options);
+    stream = chatStream(message, useStore.getState().state, options);
   }
   setResponding(true);
   try {
@@ -64,15 +70,15 @@ export async function sendMessage(
             content: { workflow: workflow },
           };
           addMessage(message);
-          for await (const updatedWorkflow of workflowEngine.run(
-            workflow,
-            stream,
-          )) {
+          for await (const updatedWorkflow of workflowEngine.run(stream)) {
             updateMessage({
               id: message.id,
               content: { workflow: updatedWorkflow },
             });
           }
+          _setState({
+            messages: workflow.finalState?.messages ?? [],
+          });
           break;
         default:
           break;
@@ -95,4 +101,10 @@ export function clearMessages() {
 
 export function setResponding(responding: boolean) {
   useStore.setState({ responding });
+}
+
+export function _setState(state: {
+  messages: { role: string; content: string }[];
+}) {
+  useStore.setState({ state });
 }

@@ -7,16 +7,29 @@ import { type ThinkingTask, type ToolCallTask } from "./tasks";
 import { type Workflow } from "./workflow";
 
 export class WorkflowEngine {
+  private _workflow: Workflow | undefined;
+
+  get workflow() {
+    if (!this._workflow) {
+      throw new Error("Workflow not started");
+    }
+    return this._workflow;
+  }
+
   start(startEvent: StartOfWorkflowEvent) {
     const workflow: Workflow = {
       id: startEvent.data.workflow_id,
       name: startEvent.data.input[0]!.content,
       steps: [],
     };
+    this._workflow = workflow;
     return workflow;
   }
 
-  async *run(workflow: Workflow, stream: AsyncIterable<ChatEvent>) {
+  async *run(stream: AsyncIterable<ChatEvent>) {
+    if (!this.workflow) {
+      throw new Error("Workflow not started");
+    }
     let currentStep: WorkflowStep | null = null;
     let currentThinkingTask: ThinkingTask | null = null;
     let pendingToolCallTasks: ToolCallTask[] = [];
@@ -32,8 +45,8 @@ export class WorkflowEngine {
             type: "agentic",
             tasks: [],
           };
-          workflow.steps.push(currentStep);
-          yield workflow;
+          this.workflow.steps.push(currentStep);
+          yield this.workflow;
           break;
         case "end_of_agent":
           currentStep = null;
@@ -48,16 +61,16 @@ export class WorkflowEngine {
             },
           };
           currentStep!.tasks.push(currentThinkingTask);
-          yield workflow;
+          yield this.workflow;
           break;
         case "end_of_llm":
           currentThinkingTask!.state = "success";
           currentThinkingTask = null;
-          yield workflow;
+          yield this.workflow;
           break;
         case "message":
           currentThinkingTask!.payload.text += event.data.delta.content;
-          yield workflow;
+          yield this.workflow;
           break;
         case "tool_call":
           toolCallTask = {
@@ -71,7 +84,7 @@ export class WorkflowEngine {
           };
           pendingToolCallTasks.push(toolCallTask);
           currentStep!.tasks.push(toolCallTask);
-          yield workflow;
+          yield this.workflow;
           break;
         case "tool_call_result":
           toolCallTask = pendingToolCallTasks.find(
@@ -84,9 +97,10 @@ export class WorkflowEngine {
               (task) => task.id !== event.data.tool_call_id,
             );
           }
-          yield workflow;
+          yield this.workflow;
           break;
         case "end_of_workflow":
+          this.workflow.finalState = { messages: event.data.messages };
           return;
         default:
           break;

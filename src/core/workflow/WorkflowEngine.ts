@@ -18,14 +18,15 @@ export class WorkflowEngine {
 
   async *run(workflow: Workflow, stream: AsyncIterable<ChatEvent>) {
     let currentStep: WorkflowStep | null = null;
-    let currentToolCallTask: ToolCallTask | null = null;
     let currentThinkingTask: ThinkingTask | null = null;
+    let pendingToolCallTasks: ToolCallTask[] = [];
+    let toolCallTask: ToolCallTask | undefined = undefined;
 
     for await (const event of stream) {
       switch (event.type) {
         case "start_of_agent":
           currentStep = {
-            id: nanoid(),
+            id: event.data.agent_id,
             agentId: event.data.agent_id,
             agentName: event.data.agent_name,
             type: "agentic",
@@ -59,8 +60,8 @@ export class WorkflowEngine {
           yield workflow;
           break;
         case "tool_call":
-          currentToolCallTask = {
-            id: nanoid(),
+          toolCallTask = {
+            id: event.data.tool_call_id,
             type: "tool_call",
             state: "pending",
             payload: {
@@ -68,12 +69,21 @@ export class WorkflowEngine {
               input: event.data.tool_input,
             },
           };
-          currentStep!.tasks.push(currentToolCallTask);
+          pendingToolCallTasks.push(toolCallTask);
+          currentStep!.tasks.push(toolCallTask);
           yield workflow;
           break;
         case "tool_call_result":
-          currentToolCallTask!.state = "success";
-          currentToolCallTask!.payload.output = event.data.tool_result;
+          toolCallTask = pendingToolCallTasks.find(
+            (task) => task.id === event.data.tool_call_id,
+          );
+          if (toolCallTask) {
+            toolCallTask.state = "success";
+            toolCallTask.payload.output = event.data.tool_result;
+            pendingToolCallTasks = pendingToolCallTasks.filter(
+              (task) => task.id !== event.data.tool_call_id,
+            );
+          }
           yield workflow;
           break;
         case "end_of_workflow":

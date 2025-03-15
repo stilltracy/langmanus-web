@@ -62,9 +62,7 @@ export function WorkflowProgressView({
                       </li>
                     ))}
                 </ul>
-                {stepIndex < workflow.steps.length - 1 && (
-                  <hr className="mb-4 mt-8" />
-                )}
+                {stepIndex < steps.length - 1 && <hr className="mb-4 mt-8" />}
               </li>
             ))}
           </ul>

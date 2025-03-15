@@ -4,6 +4,7 @@ import {
   SearchOutlined,
   UnorderedListOutlined,
 } from "@ant-design/icons";
+import { LRUCache } from "lru-cache";
 import { useMemo } from "react";
 import SyntaxHighlighter from "react-syntax-highlighter";
 import { docco } from "react-syntax-highlighter/dist/esm/styles/hljs";
@@ -44,6 +45,7 @@ function BrowserToolCallView({
   );
 }
 
+const pageCache = new LRUCache<string, string>({ max: 100 });
 function CrawlToolCallView({ task }: { task: ToolCallTask<{ url: string }> }) {
   const results = useMemo(() => {
     try {
@@ -52,6 +54,9 @@ function CrawlToolCallView({ task }: { task: ToolCallTask<{ url: string }> }) {
       return null;
     }
   }, [task.payload.output]);
+  const title = useMemo(() => {
+    return pageCache.get(task.payload.input.url);
+  }, [task.payload.input.url]);
   return (
     <div>
       <div className="flex items-center gap-2">
@@ -61,12 +66,12 @@ function CrawlToolCallView({ task }: { task: ToolCallTask<{ url: string }> }) {
         <div>
           <span>Reading</span>{" "}
           <a
-            className="text-sm"
+            className="text-sm font-bold"
             href={task.payload.input.url}
             target="_blank"
             rel="noopener noreferrer"
           >
-            {task.payload.input.url}
+            &quot;{title ?? task.payload.input.url}&quot;
           </a>
         </div>
       </div>
@@ -81,7 +86,11 @@ function TravilySearchToolCallView({
 }) {
   const results = useMemo(() => {
     try {
-      return JSON.parse(task.payload.output ?? "") ?? [];
+      const results = JSON.parse(task.payload.output ?? "") ?? [];
+      results.forEach((result: { url: string; title: string }) => {
+        pageCache.set(result.url, result.title);
+      });
+      return results;
     } catch (error) {
       return [];
     }

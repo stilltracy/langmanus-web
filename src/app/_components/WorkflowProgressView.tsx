@@ -86,7 +86,7 @@ function getStepName(step: WorkflowStep) {
     case "browser":
       return "Browsing Web";
     case "coder":
-      return "Writing Code";
+      return "Coding";
     case "file_manager":
       return "File Management";
     case "researcher":

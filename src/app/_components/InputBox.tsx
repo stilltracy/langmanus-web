@@ -5,14 +5,21 @@ import { cn } from "~/core/utils";
 
 export function InputBox({
   className,
+  size,
+  disabled,
   onSend,
 }: {
   className?: string;
+  size?: "large" | "normal";
+  disabled?: boolean;
   onSend?: (message: string) => void;
 }) {
   const [message, setMessage] = useState("");
   const [imeStatus, setImeStatus] = useState<"active" | "inactive">("inactive");
   const sendMessage = useCallback(() => {
+    if (disabled) {
+      return;
+    }
     if (message.trim() === "") {
       return;
     }
@@ -39,7 +46,10 @@ export function InputBox({
   return (
     <div className={cn(className)}>
       <textarea
-        className="m-0 min-h-4 w-full resize-none border-none px-4 py-3 text-lg"
+        className={cn(
+          "m-0 w-full resize-none border-none px-4 py-3 text-lg",
+          size === "large" ? "min-h-32" : "min-h-4",
+        )}
         placeholder="What can I do for you?"
         value={message}
         onCompositionStart={() => setImeStatus("active")}
@@ -54,6 +64,7 @@ export function InputBox({
           title="Send"
           className="bg-button text-button hover:bg-button-hover hover:text-button-hover h-10 w-10 rounded-full transition-shadow hover:shadow"
           onClick={sendMessage}
+          disabled={disabled}
         >
           <ArrowUpOutlined />
         </button>

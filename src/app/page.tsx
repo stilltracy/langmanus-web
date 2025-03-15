@@ -1,7 +1,7 @@
 "use client";
 
 import { nanoid } from "nanoid";
-import { useCallback } from "react";
+import { useCallback, useRef, useState } from "react";
 
 import { sendMessage, useStore } from "~/core/store";
 
@@ -11,16 +11,26 @@ import { MessageHistoryView } from "./_components/MessageHistoryView";
 import { cn } from "~/core/utils";
 
 export default function HomePage() {
+  const abortControllerRef = useRef<AbortController | null>(null);
   const messages = useStore((state) => state.messages);
   const responding = useStore((state) => state.responding);
-  const handleSendMessage = useCallback(async (content: string) => {
-    await sendMessage({
-      id: nanoid(),
-      role: "user",
-      type: "text",
-      content,
-    });
-  }, []);
+  const handleSendMessage = useCallback(
+    async (content: string) => {
+      const abortController = new AbortController();
+      abortControllerRef.current = abortController;
+      await sendMessage(
+        {
+          id: nanoid(),
+          role: "user",
+          type: "text",
+          content,
+        },
+        { abortSignal: abortController.signal },
+      );
+      abortControllerRef.current = null;
+    },
+    [responding],
+  );
   return (
     <div className="flex w-full flex-col items-center justify-center">
       <div className="min-w-page flex min-h-screen flex-col items-center">
@@ -54,8 +64,12 @@ export default function HomePage() {
           <div className="flex flex-col overflow-hidden rounded-[24px] border bg-white shadow-lg">
             <InputBox
               size={messages.length === 0 ? "large" : "normal"}
+              responding={responding}
               onSend={handleSendMessage}
-              disabled={responding}
+              onCancel={() => {
+                abortControllerRef.current?.abort();
+                abortControllerRef.current = null;
+              }}
             />
           </div>
           <div className="w-page absolute bottom-[-32px] h-8 backdrop-blur-sm" />

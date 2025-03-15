@@ -1,4 +1,4 @@
-import { ArrowUpOutlined } from "@ant-design/icons";
+import { ArrowUpOutlined, BorderOutlined } from "@ant-design/icons";
 import { type KeyboardEvent, useCallback, useState } from "react";
 
 import { cn } from "~/core/utils";
@@ -6,30 +6,36 @@ import { cn } from "~/core/utils";
 export function InputBox({
   className,
   size,
-  disabled,
+  responding,
   onSend,
+  onCancel,
 }: {
   className?: string;
   size?: "large" | "normal";
-  disabled?: boolean;
+  responding?: boolean;
   onSend?: (message: string) => void;
+  onCancel?: () => void;
 }) {
   const [message, setMessage] = useState("");
   const [imeStatus, setImeStatus] = useState<"active" | "inactive">("inactive");
-  const sendMessage = useCallback(() => {
-    if (disabled) {
-      return;
+  const handleSendMessage = useCallback(() => {
+    if (responding) {
+      onCancel?.();
+    } else {
+      if (message.trim() === "") {
+        return;
+      }
+      if (onSend) {
+        onSend(message);
+        setMessage("");
+      }
     }
-    if (message.trim() === "") {
-      return;
-    }
-    if (onSend) {
-      onSend(message);
-      setMessage("");
-    }
-  }, [onSend, message]);
+  }, [onSend, message, onCancel, responding]);
   const handleKeyDown = useCallback(
     (event: KeyboardEvent<HTMLTextAreaElement>) => {
+      if (responding) {
+        return;
+      }
       if (
         event.key === "Enter" &&
         !event.shiftKey &&
@@ -38,10 +44,10 @@ export function InputBox({
         imeStatus === "inactive"
       ) {
         event.preventDefault();
-        sendMessage();
+        handleSendMessage();
       }
     },
-    [sendMessage, imeStatus],
+    [handleSendMessage, imeStatus],
   );
   return (
     <div className={cn(className)}>
@@ -61,12 +67,17 @@ export function InputBox({
       />
       <div className="flex items-center justify-end px-2 py-2">
         <button
-          title="Send"
+          title={responding ? "Cancel" : "Send"}
           className="bg-button text-button hover:bg-button-hover hover:text-button-hover h-10 w-10 rounded-full transition-shadow hover:shadow"
-          onClick={sendMessage}
-          disabled={disabled}
+          onClick={handleSendMessage}
         >
-          <ArrowUpOutlined />
+          {responding ? (
+            <div className="flex h-10 w-10 items-center justify-center">
+              <div className="h-4 w-4 rounded bg-gray-300" />
+            </div>
+          ) : (
+            <ArrowUpOutlined />
+          )}
         </button>
       </div>
     </div>

@@ -39,42 +39,53 @@ export function updateMessage(message: Partial<Message> & { id: string }) {
   });
 }
 
-export async function sendMessage(message: Message) {
+export async function sendMessage(
+  message: Message,
+  options: { abortSignal?: AbortSignal } = {},
+) {
   addMessage(message);
   let stream: AsyncIterable<ChatEvent>;
   if (window.location.search.includes("mock")) {
     stream = mockChatStream(message);
   } else {
-    stream = chatStream(message);
+    stream = chatStream(message, options);
   }
   setResponding(true);
-  for await (const event of stream) {
-    switch (event.type) {
-      case "start_of_workflow":
-        const workflowEngine = new WorkflowEngine();
-        const workflow = workflowEngine.start(event);
-        const message: WorkflowMessage = {
-          id: event.data.workflow_id,
-          role: "assistant",
-          type: "workflow",
-          content: { workflow: workflow },
-        };
-        addMessage(message);
-        for await (const updatedWorkflow of workflowEngine.run(
-          workflow,
-          stream,
-        )) {
-          updateMessage({
-            id: message.id,
-            content: { workflow: updatedWorkflow },
-          });
-        }
-        break;
-      default:
-        break;
+  try {
+    for await (const event of stream) {
+      switch (event.type) {
+        case "start_of_workflow":
+          const workflowEngine = new WorkflowEngine();
+          const workflow = workflowEngine.start(event);
+          const message: WorkflowMessage = {
+            id: event.data.workflow_id,
+            role: "assistant",
+            type: "workflow",
+            content: { workflow: workflow },
+          };
+          addMessage(message);
+          for await (const updatedWorkflow of workflowEngine.run(
+            workflow,
+            stream,
+          )) {
+            updateMessage({
+              id: message.id,
+              content: { workflow: updatedWorkflow },
+            });
+          }
+          break;
+        default:
+          break;
+      }
     }
+  } catch (e) {
+    if (e instanceof DOMException && e.name === "AbortError") {
+      return;
+    }
+    throw e;
+  } finally {
+    setResponding(false);
   }
-  setResponding(false);
   return message;
 }
 

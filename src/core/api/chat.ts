@@ -5,8 +5,12 @@ import { fetchStream } from "../sse";
 
 import { type ChatEvent } from "./types";
 
-export function chatStream(userMessage: Message) {
+export function chatStream(
+  userMessage: Message,
+  options: { abortSignal?: AbortSignal } = {},
+) {
   return fetchStream<ChatEvent>(env.NEXT_PUBLIC_API_URL + "/chat/stream", {
     body: JSON.stringify({ messages: [userMessage] }),
+    signal: options.abortSignal,
   });
 }

@@ -34,28 +34,30 @@ export default function HomePage() {
             loading={responding}
           />
         </main>
-        {messages.length === 0 && (
-          <div className="flex w-[640px] translate-y-[-5vh] flex-col">
-            <h3 className="mb-2 text-center text-3xl font-medium">
-              👋 Hello, there!
-            </h3>
-            <div className="px-4 text-center text-lg text-gray-400">
-              LangManus, built on cutting-edge language models, helps you search
-              on web, browse information, and handle complex tasks.
-            </div>
-          </div>
-        )}
         <footer
           className={cn(
-            "fixed bottom-4 flex flex-col overflow-hidden rounded-[24px] border bg-white shadow transition-transform duration-500 ease-in-out",
+            "fixed bottom-4 transition-transform duration-500 ease-in-out",
             messages.length === 0 ? "w-[640px] translate-y-[-34vh]" : "w-page",
           )}
         >
-          <InputBox
-            size={messages.length === 0 ? "large" : "normal"}
-            onSend={handleSendMessage}
-            disabled={responding}
-          />
+          {messages.length === 0 && (
+            <div className="flex w-[640px] translate-y-[-32px] flex-col">
+              <h3 className="mb-2 text-center text-3xl font-medium">
+                👋 Hello, there!
+              </h3>
+              <div className="px-4 text-center text-lg text-gray-400">
+                LangManus, built on cutting-edge language models, helps you
+                search on web, browse information, and handle complex tasks.
+              </div>
+            </div>
+          )}
+          <div className="flex flex-col overflow-hidden rounded-[24px] border bg-white shadow">
+            <InputBox
+              size={messages.length === 0 ? "large" : "normal"}
+              onSend={handleSendMessage}
+              disabled={responding}
+            />
+          </div>
         </footer>
       </div>
     </div>

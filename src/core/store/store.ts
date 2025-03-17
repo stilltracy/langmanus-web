@@ -2,7 +2,7 @@ import { create } from "zustand";
 
 import { type ChatEvent, chatStream } from "../api";
 import { chatStream as mockChatStream } from "../api/mock";
-import { type WorkflowMessage, type Message } from "../messaging";
+import { type WorkflowMessage, type Message, TextMessage } from "../messaging";
 import { clone } from "../utils";
 import { WorkflowEngine } from "../workflow";
 
@@ -64,19 +64,37 @@ export async function sendMessage(
   try {
     for await (const event of stream) {
       switch (event.type) {
+        case "start_of_agent":
+          const message: TextMessage = {
+            id: event.data.agent_id,
+            role: "assistant",
+            type: "text",
+            content: "",
+          };
+          addMessage(message);
+          for await (const chunk of stream) {
+            if (chunk.type === "message") {
+              message.content += chunk.data.delta.content;
+              updateMessage({
+                id: message.id,
+                content: message.content,
+              });
+            }
+          }
+          break;
         case "start_of_workflow":
           const workflowEngine = new WorkflowEngine();
           const workflow = workflowEngine.start(event);
-          const message: WorkflowMessage = {
+          const workflowMessage: WorkflowMessage = {
             id: event.data.workflow_id,
             role: "assistant",
             type: "workflow",
             content: { workflow: workflow },
           };
-          addMessage(message);
+          addMessage(workflowMessage);
           for await (const updatedWorkflow of workflowEngine.run(stream)) {
             updateMessage({
-              id: message.id,
+              id: workflowMessage.id,
               content: { workflow: updatedWorkflow },
             });
           }

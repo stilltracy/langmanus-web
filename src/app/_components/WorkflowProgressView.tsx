@@ -120,7 +120,7 @@ function PlanTaskView({ task }: { task: ThinkingTask }) {
     }
     return {};
   }, [task]);
-  const [showReason, setShowReason] = useState(false);
+  const [showReason, setShowReason] = useState(true);
   const reason = task.payload.reason;
   const markdown = `## ${plan.title ?? ""}\n\n${plan.steps?.map((step) => `- **${step.title ?? ""}**\n\n${step.description ?? ""}`).join("\n\n") ?? ""}`;
   return (

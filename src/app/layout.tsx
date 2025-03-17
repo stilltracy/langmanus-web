@@ -15,7 +15,7 @@ export default function RootLayout({
 }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en" className={`${GeistSans.variable}`}>
-      <body className="min-w-screen bg-body flex min-h-screen">{children}</body>
+      <body className="min-w-screen flex min-h-screen bg-body">{children}</body>
     </html>
   );
 }

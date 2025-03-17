@@ -142,7 +142,9 @@ function PlanTaskView({ task }: { task: ThinkingTask }) {
             </button>
           </div>
           <div className={cn(showReason ? "block" : "hidden")}>
-            <Markdown className="border-l-2 pl-6 opacity-70">{reason}</Markdown>
+            <Markdown className="border-l-2 pl-6 text-sm opacity-70">
+              {reason}
+            </Markdown>
           </div>
         </div>
       )}

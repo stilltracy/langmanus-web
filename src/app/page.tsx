@@ -17,7 +17,7 @@ export default function HomePage() {
   const handleSendMessage = useCallback(
     async (
       content: string,
-      config: { deepThinkMode: boolean; searchBeforePlanning: boolean },
+      config: { deepThinkingMode: boolean; searchBeforePlanning: boolean },
     ) => {
       const abortController = new AbortController();
       abortControllerRef.current = abortController;

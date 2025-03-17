@@ -16,31 +16,31 @@ export function InputBox({
   responding?: boolean;
   onSend?: (
     message: string,
-    options: { deepThinkMode: boolean; searchBeforePlanning: boolean },
+    options: { deepThinkingMode: boolean; searchBeforePlanning: boolean },
   ) => void;
   onCancel?: () => void;
 }) {
   const [message, setMessage] = useState("");
-  const [deepThinkMode, setDeepThinkMode] = useState(false);
+  const [deepThinkingMode, setDeepThinkMode] = useState(false);
   const [searchBeforePlanning, setSearchBeforePlanning] = useState(false);
   const [imeStatus, setImeStatus] = useState<"active" | "inactive">("inactive");
   const saveConfig = useCallback(() => {
     localStorage.setItem(
       "langmanus.config.inputbox",
-      JSON.stringify({ deepThinkMode, searchBeforePlanning }),
+      JSON.stringify({ deepThinkingMode, searchBeforePlanning }),
     );
-  }, [deepThinkMode, searchBeforePlanning]);
+  }, [deepThinkingMode, searchBeforePlanning]);
   useEffect(() => {
     const config = localStorage.getItem("langmanus.config.inputbox");
     if (config) {
-      const { deepThinkMode, searchBeforePlanning } = JSON.parse(config);
-      setDeepThinkMode(deepThinkMode);
+      const { deepThinkingMode, searchBeforePlanning } = JSON.parse(config);
+      setDeepThinkMode(deepThinkingMode);
       setSearchBeforePlanning(searchBeforePlanning);
     }
   }, []);
   useEffect(() => {
     saveConfig();
-  }, [deepThinkMode, searchBeforePlanning, saveConfig]);
+  }, [deepThinkingMode, searchBeforePlanning, saveConfig]);
   const handleSendMessage = useCallback(() => {
     if (responding) {
       onCancel?.();
@@ -49,7 +49,7 @@ export function InputBox({
         return;
       }
       if (onSend) {
-        onSend(message, { deepThinkMode, searchBeforePlanning });
+        onSend(message, { deepThinkingMode, searchBeforePlanning });
         setMessage("");
       }
     }
@@ -58,7 +58,7 @@ export function InputBox({
     onCancel,
     message,
     onSend,
-    deepThinkMode,
+    deepThinkingMode,
     searchBeforePlanning,
   ]);
   const handleKeyDown = useCallback(
@@ -102,12 +102,12 @@ export function InputBox({
           <button
             className={cn(
               "flex h-8 items-center gap-2 rounded-2xl border px-4 text-sm transition-shadow hover:shadow",
-              deepThinkMode
+              deepThinkingMode
                 ? "border-primary bg-primary/15 text-primary"
                 : "text-button hover:bg-button-hover hover:text-button-hover",
             )}
             onClick={() => {
-              setDeepThinkMode(!deepThinkMode);
+              setDeepThinkMode(!deepThinkingMode);
             }}
           >
             <Atom className="h-4 w-4" />
@@ -130,11 +130,11 @@ export function InputBox({
         </div>
         <div className="flex flex-shrink-0 items-center gap-2">
           <button
-            title={responding ? "Cancel" : "Send"}
             className={cn(
               "h-10 w-10 rounded-full text-button transition-shadow hover:bg-button-hover hover:text-button-hover hover:shadow",
               responding ? "bg-button-hover" : "bg-button",
             )}
+            title={responding ? "Cancel" : "Send"}
             onClick={handleSendMessage}
           >
             {responding ? (

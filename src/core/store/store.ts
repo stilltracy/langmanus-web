@@ -2,7 +2,11 @@ import { create } from "zustand";
 
 import { type ChatEvent, chatStream } from "../api";
 import { chatStream as mockChatStream } from "../api/mock";
-import { type WorkflowMessage, type Message, TextMessage } from "../messaging";
+import {
+  type WorkflowMessage,
+  type Message,
+  type TextMessage,
+} from "../messaging";
 import { clone } from "../utils";
 import { WorkflowEngine } from "../workflow";
 
@@ -48,7 +52,7 @@ export function updateMessage(message: Partial<Message> & { id: string }) {
 export async function sendMessage(
   message: Message,
   params: {
-    deepThinkMode: boolean;
+    deepThinkingMode: boolean;
     searchBeforePlanning: boolean;
   },
   options: { abortSignal?: AbortSignal } = {},
@@ -61,26 +65,31 @@ export async function sendMessage(
     stream = chatStream(message, useStore.getState().state, params, options);
   }
   setResponding(true);
+
+  let textMessage: TextMessage | null = null;
   try {
     for await (const event of stream) {
       switch (event.type) {
         case "start_of_agent":
-          const message: TextMessage = {
+          textMessage = {
             id: event.data.agent_id,
             role: "assistant",
             type: "text",
             content: "",
           };
-          addMessage(message);
-          for await (const chunk of stream) {
-            if (chunk.type === "message") {
-              message.content += chunk.data.delta.content;
-              updateMessage({
-                id: message.id,
-                content: message.content,
-              });
-            }
+          addMessage(textMessage);
+          break;
+        case "message":
+          if (textMessage) {
+            textMessage.content += event.data.delta.content;
+            updateMessage({
+              id: textMessage.id,
+              content: textMessage.content,
+            });
           }
+          break;
+        case "end_of_agent":
+          textMessage = null;
           break;
         case "start_of_workflow":
           const workflowEngine = new WorkflowEngine();

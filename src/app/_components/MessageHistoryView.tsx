@@ -26,13 +26,13 @@ export function MessageHistoryView({
 }
 
 function MessageView({ message }: { message: Message }) {
-  if (message.type === "text") {
+  if (message.type === "text" && message.content) {
     return (
       <div className={cn("flex", message.role === "user" && "justify-end")}>
         <div
           className={cn(
             "relative mb-8 w-fit max-w-[560px] rounded-2xl px-4 py-3 shadow-sm",
-            message.role === "user" && "bg-primary rounded-ee-none text-white",
+            message.role === "user" && "rounded-ee-none bg-primary text-white",
             message.role === "assistant" && "rounded-es-none bg-white",
           )}
         >

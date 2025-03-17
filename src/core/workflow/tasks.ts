@@ -22,7 +22,8 @@ export interface ThinkingTask
   extends GenericWorkflowTask<
     "thinking",
     {
-      text: string;
+      text?: string;
+      reason?: string;
     }
   > {}
 

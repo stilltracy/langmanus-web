@@ -1,9 +1,17 @@
+import { DownOutlined, UpOutlined } from "@ant-design/icons";
+import { parse } from "best-effort-json-parser";
+import { useMemo, useState } from "react";
+
+import { Atom } from "~/core/icons";
 import { cn } from "~/core/utils";
-import { WorkflowStep, type Workflow } from "~/core/workflow";
+import {
+  type WorkflowStep,
+  type Workflow,
+  type ThinkingTask,
+} from "~/core/workflow";
 
 import { Markdown } from "./Markdown";
 import { ToolCallView } from "./ToolCallView";
-import { useMemo } from "react";
 
 export function WorkflowProgressView({
   className,
@@ -55,24 +63,33 @@ export function WorkflowProgressView({
                   {step.tasks
                     .filter(
                       (task) =>
-                        !(task.type === "thinking" && task.payload.text === ""),
+                        !(
+                          task.type === "thinking" &&
+                          !task.payload.text &&
+                          !task.payload.reason
+                        ),
                     )
-                    .map((task) => (
-                      <li key={task.id} className="flex">
-                        {task.type === "thinking" ? (
-                          <Markdown
-                            className="pl-6 opacity-70"
-                            style={{
-                              fontSize: "smaller",
-                            }}
-                          >
-                            {task.payload.text}
-                          </Markdown>
-                        ) : (
-                          <ToolCallView task={task} />
-                        )}
-                      </li>
-                    ))}
+                    .map((task) =>
+                      task.type === "thinking" &&
+                      step.agentName === "planner" ? (
+                        <PlanTaskView key={task.id} task={task} />
+                      ) : (
+                        <li key={task.id} className="flex">
+                          {task.type === "thinking" ? (
+                            <Markdown
+                              className="pl-6 opacity-70"
+                              style={{
+                                fontSize: "smaller",
+                              }}
+                            >
+                              {task.payload.text}
+                            </Markdown>
+                          ) : (
+                            <ToolCallView task={task} />
+                          )}
+                        </li>
+                      ),
+                    )}
                 </ul>
                 {stepIndex < steps.length - 1 && <hr className="mb-4 mt-8" />}
               </li>
@@ -93,6 +110,49 @@ export function WorkflowProgressView({
   );
 }
 
+function PlanTaskView({ task }: { task: ThinkingTask }) {
+  const plan = useMemo<{
+    title?: string;
+    steps?: { title?: string; description?: string }[];
+  }>(() => {
+    if (task.payload.text) {
+      return parse(task.payload.text);
+    }
+    return {};
+  }, [task]);
+  const [showReason, setShowReason] = useState(false);
+  const reason = task.payload.reason;
+  const markdown = `## ${plan.title ?? ""}\n\n${plan.steps?.map((step) => `- **${step.title ?? ""}**\n\n${step.description ?? ""}`).join("\n\n") ?? ""}`;
+  return (
+    <li key={task.id} className="flex flex-col">
+      {reason && (
+        <div>
+          <div>
+            <button
+              className="mb-1 flex h-8 items-center gap-2 rounded-2xl border bg-button px-4 text-sm text-button hover:bg-button-hover hover:text-button-hover"
+              onClick={() => setShowReason(!showReason)}
+            >
+              <Atom className="h-4 w-4" />
+              <span>Deep Thought</span>
+              {showReason ? (
+                <UpOutlined className="text-xs" />
+              ) : (
+                <DownOutlined className="text-xs" />
+              )}
+            </button>
+          </div>
+          <div className={cn(showReason ? "block" : "hidden")}>
+            <Markdown className="border-l-2 pl-6 opacity-70">{reason}</Markdown>
+          </div>
+        </div>
+      )}
+      <div>
+        <Markdown className="pl-6">{markdown ?? ""}</Markdown>
+      </div>
+    </li>
+  );
+}
+
 function getStepName(step: WorkflowStep) {
   switch (step.agentName) {
     case "browser":
@@ -101,6 +161,8 @@ function getStepName(step: WorkflowStep) {
       return "Coding";
     case "file_manager":
       return "File Management";
+    case "planner":
+      return "Planning";
     case "researcher":
       return "Researching";
     case "supervisor":

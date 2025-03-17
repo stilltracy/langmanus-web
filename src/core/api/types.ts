@@ -51,7 +51,10 @@ export interface EndOfLLMEvent
 export interface MessageEvent
   extends GenericChatEvent<
     "message",
-    { message_id: string; delta: { content: string } }
+    {
+      message_id: string;
+      delta: { content?: string; reasoning_content?: string };
+    }
   > {}
 
 export type ChatEvent =

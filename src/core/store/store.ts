@@ -1,10 +1,10 @@
 import { create } from "zustand";
 
-import { ChatEvent, chatStream } from "../api";
+import { type ChatEvent, chatStream } from "../api";
 import { chatStream as mockChatStream } from "../api/mock";
 import { type WorkflowMessage, type Message } from "../messaging";
-import { WorkflowEngine } from "../workflow";
 import { clone } from "../utils";
+import { WorkflowEngine } from "../workflow";
 
 export const useStore = create<{
   messages: Message[];
@@ -47,6 +47,10 @@ export function updateMessage(message: Partial<Message> & { id: string }) {
 
 export async function sendMessage(
   message: Message,
+  params: {
+    deepThinkMode: boolean;
+    searchBeforePlanning: boolean;
+  },
   options: { abortSignal?: AbortSignal } = {},
 ) {
   addMessage(message);
@@ -54,7 +58,7 @@ export async function sendMessage(
   if (window.location.search.includes("mock")) {
     stream = mockChatStream(message);
   } else {
-    stream = chatStream(message, useStore.getState().state, options);
+    stream = chatStream(message, useStore.getState().state, params, options);
   }
   setResponding(true);
   try {

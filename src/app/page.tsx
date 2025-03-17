@@ -1,21 +1,24 @@
 "use client";
 
 import { nanoid } from "nanoid";
-import { useCallback, useRef, useState } from "react";
+import { useCallback, useRef } from "react";
 
 import { sendMessage, useStore } from "~/core/store";
+import { cn } from "~/core/utils";
 
 import { AppHeader } from "./_components/AppHeader";
 import { InputBox } from "./_components/InputBox";
 import { MessageHistoryView } from "./_components/MessageHistoryView";
-import { cn } from "~/core/utils";
 
 export default function HomePage() {
   const abortControllerRef = useRef<AbortController | null>(null);
   const messages = useStore((state) => state.messages);
   const responding = useStore((state) => state.responding);
   const handleSendMessage = useCallback(
-    async (content: string) => {
+    async (
+      content: string,
+      config: { deepThinkMode: boolean; searchBeforePlanning: boolean },
+    ) => {
       const abortController = new AbortController();
       abortControllerRef.current = abortController;
       await sendMessage(
@@ -25,15 +28,16 @@ export default function HomePage() {
           type: "text",
           content,
         },
+        config,
         { abortSignal: abortController.signal },
       );
       abortControllerRef.current = null;
     },
-    [responding],
+    [],
   );
   return (
     <div className="flex w-full flex-col items-center justify-center">
-      <div className="min-w-page flex min-h-screen flex-col items-center">
+      <div className="flex min-h-screen min-w-page flex-col items-center">
         <header className="fixed left-0 right-0 top-0 flex h-16 w-full items-center px-4">
           <AppHeader />
         </header>
@@ -72,7 +76,7 @@ export default function HomePage() {
               }}
             />
           </div>
-          <div className="w-page absolute bottom-[-32px] h-8 backdrop-blur-sm" />
+          <div className="absolute bottom-[-32px] h-8 w-page backdrop-blur-sm" />
         </footer>
       </div>
     </div>

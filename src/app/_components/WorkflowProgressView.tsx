@@ -99,7 +99,7 @@ export function WorkflowProgressView({
       </div>
       {reportStep && (
         <div className="flex flex-col gap-4 p-4">
-          <Markdown>
+          <Markdown type="report">
             {reportStep.tasks[0]?.type === "thinking"
               ? reportStep.tasks[0].payload.text
               : ""}

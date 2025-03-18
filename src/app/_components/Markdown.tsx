@@ -1,7 +1,6 @@
 import ReactMarkdown, { type Options } from "react-markdown";
 import { CopyOutlined } from "@ant-design/icons";
 import { useState } from "react";
-import remarkGfm from "remark-gfm";
 
 import { cn } from "~/core/utils";
 
@@ -24,9 +23,14 @@ export function Markdown({
   style,
   type = "report",
   ...props
-}: MarkdownProps) {
+
+}: Options & { 
+  className?: string; 
+  style?: React.CSSProperties;
+  type?: "report" | "flow";
+}) {
   const [copied, setCopied] = useState(false);
-  const markdownContent = String(children);
+  const markdownContent = typeof children === "string" ? children : "";
 
   const copyButtonText = type === "flow" ? "Copy Flow" : "Copy Report";
 
@@ -121,6 +125,7 @@ export function Markdown({
       >
         {children}
       </ReactMarkdown>
+
       <div className="mt-4 flex justify-end">
         <button
           className="flex items-center gap-2 rounded-full bg-gray-50 px-4 py-2 text-sm text-gray-600 transition-all hover:bg-gray-100 hover:text-gray-900"

@@ -47,13 +47,6 @@ function BrowserToolCallView({
 
 const pageCache = new LRUCache<string, string>({ max: 100 });
 function CrawlToolCallView({ task }: { task: ToolCallTask<{ url: string }> }) {
-  const results = useMemo(() => {
-    try {
-      return JSON.parse(task.payload.output ?? "") ?? null;
-    } catch (error) {
-      return null;
-    }
-  }, [task.payload.output]);
   const title = useMemo(() => {
     return pageCache.get(task.payload.input.url);
   }, [task.payload.input.url]);
@@ -91,7 +84,7 @@ function TravilySearchToolCallView({
         pageCache.set(result.url, result.title);
       });
       return results;
-    } catch (error) {
+    } catch {
       return [];
     }
   }, [task.payload.output]);

@@ -116,7 +116,18 @@ function PlanTaskView({ task }: { task: ThinkingTask }) {
     steps?: { title?: string; description?: string }[];
   }>(() => {
     if (task.payload.text) {
-      return parse(task.payload.text);
+      let jsonString = task.payload.text.trim();
+      if (jsonString.startsWith("```json\n")) {
+        jsonString = jsonString.substring(7);
+      }
+      if (jsonString.endsWith("\n```")) {
+        jsonString = jsonString.substring(0, jsonString.length - 3);
+      }
+      try {
+        return parse(jsonString);
+      } catch {
+        return {};
+      }
     }
     return {};
   }, [task]);

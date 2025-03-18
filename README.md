@@ -41,6 +41,8 @@ cp .env.example .env
 
 ### Installation
 
+**IMPORTANT: First, **start the Python server**, see [LangManus](https://github.com/langmanus/langmanus) for more details.**
+
 ```bash
 # Clone the repository
 git clone https://github.com/langmanus/langmanus-web.git

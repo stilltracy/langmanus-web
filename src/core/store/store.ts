@@ -79,6 +79,11 @@ export async function sendMessage(
           };
           addMessage(textMessage);
           break;
+        case "final_session_state":
+          _setState({
+            messages: event.data.messages,
+          });
+          break;
         case "message":
           if (textMessage) {
             textMessage.content += event.data.delta.content;

@@ -21,6 +21,12 @@ export interface EndOfWorkflowEvent
     { workflow_id: string; messages: { role: string; content: string }[] }
   > {}
 
+export interface FinalSessionStateEvent
+  extends GenericChatEvent<
+    "final_session_state",
+    { messages: { role: string; content: string }[] }
+  > {}
+
 export interface StartOfAgentEvent
   extends GenericChatEvent<
     "start_of_agent",
@@ -64,6 +70,7 @@ export type ChatEvent =
   | EndOfWorkflowEvent
   | StartOfAgentEvent
   | EndOfAgentEvent
+  | FinalSessionStateEvent
   | ToolCallEvent
   | ToolCallResultEvent
   | StartOfLLMEvent

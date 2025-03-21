@@ -1,6 +1,5 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
-.npmrc
 # dependencies
 /node_modules
 /.pnp
@@ -45,3 +44,6 @@ yarn-error.log*
 
 # idea files
 .idea
+
+# npm
+.npmrc

@@ -1,8 +1,12 @@
-import { DownOutlined, UpOutlined } from "@ant-design/icons";
 import { parse } from "best-effort-json-parser";
-import { useMemo, useState } from "react";
+import { useMemo } from "react";
 
-import { Button } from "~/components/ui/button";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "~/components/ui/accordion";
 import { Atom } from "~/core/icons";
 import { cn } from "~/core/utils";
 import {
@@ -132,35 +136,29 @@ function PlanTaskView({ task }: { task: ThinkingTask }) {
     }
     return {};
   }, [task]);
-  const [showReason, setShowReason] = useState(true);
   const reason = task.payload.reason;
   const markdown = `## ${plan.title ?? ""}\n\n${plan.steps?.map((step) => `- **${step.title ?? ""}**\n\n${step.description ?? ""}`).join("\n\n") ?? ""}`;
   return (
     <li key={task.id} className="flex flex-col">
       {reason && (
-        <div>
-          <div>
-            <Button
-              variant="outline"
-              size="sm"
-              className="mb-1 flex gap-2 rounded-2xl"
-              onClick={() => setShowReason(!showReason)}
-            >
+        <Accordion
+          type="single"
+          collapsible
+          className="mb-2"
+          defaultValue="deep-thought"
+        >
+          <AccordionItem value="deep-thought" className="border-none">
+            <AccordionTrigger className="flex w-fit flex-none items-center gap-2 rounded-2xl border px-3 py-1 text-sm hover:no-underline [&[data-state=open]>svg]:rotate-180">
               <Atom className="h-4 w-4" />
               <span>Deep Thought</span>
-              {showReason ? (
-                <UpOutlined className="text-xs" />
-              ) : (
-                <DownOutlined className="text-xs" />
-              )}
-            </Button>
-          </div>
-          <div className={cn(showReason ? "block" : "hidden")}>
-            <Markdown className="border-l-2 pl-6 text-sm opacity-70">
-              {reason}
-            </Markdown>
-          </div>
-        </div>
+            </AccordionTrigger>
+            <AccordionContent>
+              <Markdown className="border-l-2 pt-2 pl-6 text-sm opacity-70">
+                {reason}
+              </Markdown>
+            </AccordionContent>
+          </AccordionItem>
+        </Accordion>
       )}
       <div>
         <Markdown className="pl-6">{markdown ?? ""}</Markdown>

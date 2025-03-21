@@ -5,7 +5,6 @@ import {
   UnorderedListOutlined,
 } from "@ant-design/icons";
 import { LRUCache } from "lru-cache";
-import Image from "next/image";
 import { useMemo } from "react";
 import SyntaxHighlighter from "react-syntax-highlighter";
 import { docco } from "react-syntax-highlighter/dist/esm/styles/hljs";
@@ -123,8 +122,10 @@ function TravilySearchToolCallView({
                   rel="noopener noreferrer"
                   href={result.url}
                 >
-                  <Image
+                  <img
                     className="h-4 w-4 rounded-full bg-slate-100 shadow"
+                    width={16}
+                    height={16}
                     src={new URL(result.url).origin + "/favicon.ico"}
                     alt={result.title}
                     onError={(e) => {

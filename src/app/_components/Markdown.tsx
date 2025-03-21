@@ -3,10 +3,14 @@ import { useState } from "react";
 import ReactMarkdown, {
   type Options as ReactMarkdownOptions,
 } from "react-markdown";
+import rehypeKatex from "rehype-katex";
 import remarkGfm from "remark-gfm";
+import remarkMath from "remark-math";
 
 import { Button } from "~/components/ui/button";
 import { cn } from "~/core/utils";
+
+import "katex/dist/katex.min.css";
 
 export function Markdown({
   className,
@@ -25,7 +29,8 @@ export function Markdown({
       style={style}
     >
       <ReactMarkdown
-        remarkPlugins={[remarkGfm]}
+        remarkPlugins={[remarkGfm, remarkMath]}
+        rehypePlugins={[rehypeKatex]}
         components={{
           a: ({ href, children }) => (
             <a href={href} target="_blank" rel="noopener noreferrer">
@@ -35,7 +40,7 @@ export function Markdown({
         }}
         {...props}
       >
-        {children}
+        {processKatexInMarkdown(children)}
       </ReactMarkdown>
       {enableCopy && typeof children === "string" && (
         <div className="flex">
@@ -73,4 +78,19 @@ function CopyButton({ content }: { content: string }) {
       {copied ? "Copied" : "Copy"}
     </Button>
   );
+}
+
+export function processKatexInMarkdown(markdown?: string | null) {
+  if (!markdown) return markdown;
+
+  const markdownWithKatexSyntax = markdown
+    .replace(/\\\\\[/g, "$$$$") // Replace '\\[' with '$$'
+    .replace(/\\\\\]/g, "$$$$") // Replace '\\]' with '$$'
+    .replace(/\\\\\(/g, "$$$$") // Replace '\\(' with '$$'
+    .replace(/\\\\\)/g, "$$$$") // Replace '\\)' with '$$'
+    .replace(/\\\[/g, "$$$$") // Replace '\[' with '$$'
+    .replace(/\\\]/g, "$$$$") // Replace '\]' with '$$'
+    .replace(/\\\(/g, "$$$$") // Replace '\(' with '$$'
+    .replace(/\\\)/g, "$$$$"); // Replace '\)' with '$$';
+  return markdownWithKatexSyntax;
 }

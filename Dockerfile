@@ -24,7 +24,7 @@ ARG NEXT_PUBLIC_API_URL
 COPY --from=deps /app/node_modules ./node_modules
 COPY . .
 
-ENV NEXT_TELEMETRY_DISABLED 1
+ENV NEXT_TELEMETRY_DISABLED=1
 
 RUN \
     if [ -f yarn.lock ]; then SKIP_ENV_VALIDATION=1 yarn build; \
@@ -38,9 +38,9 @@ RUN \
 FROM gcr.io/distroless/nodejs20-debian12 AS runner
 WORKDIR /app
 
-ENV NODE_ENV production
+ENV NODE_ENV=production
 
-# ENV NEXT_TELEMETRY_DISABLED 1
+ENV NEXT_TELEMETRY_DISABLED=1
 
 COPY --from=builder /app/next.config.js ./
 COPY --from=builder /app/public ./public
@@ -50,6 +50,6 @@ COPY --from=builder /app/.next/standalone ./
 COPY --from=builder /app/.next/static ./.next/static
 
 EXPOSE 3000
-ENV PORT 3000
+ENV PORT=3000
 
 CMD ["server.js"]

@@ -35,7 +35,8 @@ export function WorkflowProgressView({
     return workflow.steps.find((step) => step.agentName === "reporter");
   }, [workflow]);
 
-  useAutoScrollToBottom(mainRef);
+  // TODO: disable auto scroll when generating report
+  useAutoScrollToBottom(mainRef, true);
 
   return (
     <div className="flex flex-col gap-4">
@@ -110,6 +111,7 @@ export function WorkflowProgressView({
       </div>
       {reportStep && (
         <div className="flex flex-col gap-4 p-4">
+          {/* TODO: hide this when generating report */}
           <Markdown enableCopy>
             {reportStep.tasks[0]?.type === "thinking"
               ? reportStep.tasks[0].payload.text

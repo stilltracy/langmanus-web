@@ -236,3 +236,8 @@ textarea {
     @apply bg-background text-foreground;
   }
 }
+
+/* hack fix for https://github.com/KaTeX/KaTeX/discussions/2942 */
+.katex {
+  position: relative;
+}

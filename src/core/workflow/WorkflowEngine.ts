@@ -43,12 +43,16 @@ export class WorkflowEngine {
             agentId: event.data.agent_id,
             agentName: event.data.agent_name,
             type: "agentic",
+            isCompleted: true,
             tasks: [],
           };
           this.workflow.steps.push(currentStep);
           yield this.workflow;
           break;
         case "end_of_agent":
+          if (currentStep) {
+            currentStep.isCompleted = false;
+          }
           currentStep = null;
           break;
         case "start_of_llm":
@@ -114,6 +118,7 @@ export class WorkflowEngine {
           break;
         case "end_of_workflow":
           this.workflow.finalState = { messages: event.data.messages };
+          this.workflow.isCompleted = true;
           return;
         default:
           break;

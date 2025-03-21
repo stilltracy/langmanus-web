@@ -1,6 +1,7 @@
 import { parse } from "best-effort-json-parser";
-import { useMemo } from "react";
+import { useMemo, useRef } from "react";
 
+import { useAutoScrollToBottom } from "~/components/hooks/useAutoScrollToBottom";
 import {
   Accordion,
   AccordionContent,
@@ -25,12 +26,17 @@ export function WorkflowProgressView({
   className?: string;
   workflow: Workflow;
 }) {
+  const mainRef = useRef<HTMLDivElement>(null);
+
   const steps = useMemo(() => {
     return workflow.steps.filter((step) => step.agentName !== "reporter");
   }, [workflow]);
   const reportStep = useMemo(() => {
     return workflow.steps.find((step) => step.agentName === "reporter");
   }, [workflow]);
+
+  useAutoScrollToBottom(mainRef);
+
   return (
     <div className="flex flex-col gap-4">
       <div className={cn("flex overflow-hidden rounded-2xl border", className)}>
@@ -57,7 +63,7 @@ export function WorkflowProgressView({
             ))}
           </ol>
         </aside>
-        <main className="grow overflow-auto bg-white p-4">
+        <main className="grow overflow-auto bg-white p-4" ref={mainRef}>
           <ul className="flex flex-col gap-4">
             {steps.map((step, stepIndex) => (
               <li key={step.id} className="flex flex-col gap-2">

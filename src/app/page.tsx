@@ -35,13 +35,14 @@ export default function HomePage() {
     },
     [],
   );
+
   return (
     <div className="flex w-full flex-col items-center justify-center">
-      <div className="flex min-h-screen min-w-page flex-col items-center">
-        <header className="fixed left-0 right-0 top-0 flex h-16 w-full items-center px-4">
+      <div className="min-w-page flex min-h-screen flex-col items-center">
+        <header className="fixed top-0 right-0 left-0 flex h-16 w-full items-center px-4">
           <AppHeader />
         </header>
-        <main className="mb-48 mt-16 px-4">
+        <main className="mt-16 mb-48 px-4">
           <MessageHistoryView
             className="w-page"
             messages={messages}
@@ -76,7 +77,7 @@ export default function HomePage() {
               }}
             />
           </div>
-          <div className="absolute bottom-[-32px] h-8 w-page backdrop-blur-xs" />
+          <div className="w-page absolute bottom-[-32px] h-8 backdrop-blur-xs" />
         </footer>
       </div>
     </div>

@@ -102,12 +102,10 @@ export function InputBox({
         <div className="flex grow items-center gap-2">
           <Button
             variant="outline"
-            className={cn(
-              "rounded-2xl px-4 text-sm",
-              deepThinkingMode
-                ? "border-primary bg-primary/15 text-primary"
-                : "text-button hover:bg-button-hover hover:text-button-hover",
-            )}
+            className={cn("rounded-2xl px-4 text-sm", {
+              "border-blue-300 bg-blue-100 text-blue-500 hover:bg-blue-200 hover:text-blue-600":
+                deepThinkingMode,
+            })}
             onClick={() => {
               setDeepThinkMode(!deepThinkingMode);
             }}
@@ -117,12 +115,10 @@ export function InputBox({
           </Button>
           <Button
             variant="outline"
-            className={cn(
-              "rounded-2xl px-4 text-sm",
-              searchBeforePlanning
-                ? "border-primary bg-primary/15 text-primary"
-                : "text-button hover:bg-button-hover hover:text-button-hover",
-            )}
+            className={cn("rounded-2xl px-4 text-sm", {
+              "border-blue-300 bg-blue-100 text-blue-500 hover:bg-blue-200 hover:text-blue-600":
+                searchBeforePlanning,
+            })}
             onClick={() => {
               setSearchBeforePlanning(!searchBeforePlanning);
             }}

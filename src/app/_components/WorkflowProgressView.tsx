@@ -1,7 +1,8 @@
 import { parse } from "best-effort-json-parser";
-import { useMemo, useRef } from "react";
+import { useMemo, useRef, useState } from "react";
 
 import { useAutoScrollToBottom } from "~/components/hooks/useAutoScrollToBottom";
+import { useOnStateChangeEffect } from "~/components/hooks/useOnStateChangeEffect";
 import {
   Accordion,
   AccordionContent,
@@ -35,8 +36,7 @@ export function WorkflowProgressView({
     return workflow.steps.find((step) => step.agentName === "reporter");
   }, [workflow]);
 
-  // TODO: disable auto scroll when generating report
-  useAutoScrollToBottom(mainRef, true);
+  useAutoScrollToBottom(mainRef, !workflow.isCompleted);
 
   return (
     <div className="flex flex-col gap-4">
@@ -111,8 +111,7 @@ export function WorkflowProgressView({
       </div>
       {reportStep && (
         <div className="flex flex-col gap-4 p-4">
-          {/* TODO: hide this when generating report */}
-          <Markdown enableCopy>
+          <Markdown enableCopy={workflow.isCompleted}>
             {reportStep.tasks[0]?.type === "thinking"
               ? reportStep.tasks[0].payload.text
               : ""}
@@ -124,6 +123,8 @@ export function WorkflowProgressView({
 }
 
 function PlanTaskView({ task }: { task: ThinkingTask }) {
+  const [isThinkingCollapsed, setIsThinkingCollapsed] = useState(false);
+
   const plan = useMemo<{
     title?: string;
     steps?: { title?: string; description?: string }[];
@@ -146,6 +147,19 @@ function PlanTaskView({ task }: { task: ThinkingTask }) {
   }, [task]);
   const reason = task.payload.reason;
   const markdown = `## ${plan.title ?? ""}\n\n${plan.steps?.map((step) => `- **${step.title ?? ""}**\n\n${step.description ?? ""}`).join("\n\n") ?? ""}`;
+
+  useOnStateChangeEffect(
+    // TODO: switch to thinking state
+    task.state,
+    {
+      from: "pending",
+      to: "success",
+    },
+    () => {
+      setIsThinkingCollapsed(true);
+    },
+  );
+
   return (
     <li key={task.id} className="flex flex-col">
       {reason && (
@@ -153,7 +167,10 @@ function PlanTaskView({ task }: { task: ThinkingTask }) {
           type="single"
           collapsible
           className="mb-2"
-          defaultValue="deep-thought"
+          value={isThinkingCollapsed ? "" : "deep-thought"}
+          onValueChange={(value) => {
+            setIsThinkingCollapsed(value === "");
+          }}
         >
           <AccordionItem value="deep-thought" className="border-none">
             <AccordionTrigger className="flex w-fit flex-none items-center gap-2 rounded-2xl border px-3 py-1 text-sm hover:no-underline [&[data-state=open]>svg]:rotate-180">

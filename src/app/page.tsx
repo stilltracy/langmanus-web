@@ -41,8 +41,7 @@ export default function HomePage() {
     [],
   );
 
-  // TODO: disable auto scroll when generating report
-  useAutoScrollToBottom(scrollAreaRef, true);
+  useAutoScrollToBottom(scrollAreaRef, responding);
 
   return (
     <ScrollArea className="h-screen w-full" ref={scrollAreaRef}>

@@ -1,13 +1,20 @@
-import { DownOutlined, UpOutlined } from "@ant-design/icons";
 import { parse } from "best-effort-json-parser";
-import { useMemo, useState } from "react";
+import { useMemo, useRef, useState } from "react";
 
+import { useAutoScrollToBottom } from "~/components/hooks/useAutoScrollToBottom";
+import { useOnStateChangeEffect } from "~/components/hooks/useOnStateChangeEffect";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "~/components/ui/accordion";
 import { Atom } from "~/core/icons";
 import { cn } from "~/core/utils";
 import {
-  type WorkflowStep,
-  type Workflow,
   type ThinkingTask,
+  type Workflow,
+  type WorkflowStep,
 } from "~/core/workflow";
 
 import { Markdown } from "./Markdown";
@@ -20,18 +27,23 @@ export function WorkflowProgressView({
   className?: string;
   workflow: Workflow;
 }) {
+  const mainRef = useRef<HTMLDivElement>(null);
+
   const steps = useMemo(() => {
     return workflow.steps.filter((step) => step.agentName !== "reporter");
   }, [workflow]);
   const reportStep = useMemo(() => {
     return workflow.steps.find((step) => step.agentName === "reporter");
   }, [workflow]);
+
+  useAutoScrollToBottom(mainRef, !workflow.isCompleted);
+
   return (
     <div className="flex flex-col gap-4">
       <div className={cn("flex overflow-hidden rounded-2xl border", className)}>
-        <aside className="flex w-[220px] flex-shrink-0 flex-col border-r bg-[rgba(0,0,0,0.02)]">
-          <div className="flex-shrink-0 px-4 py-4 font-medium">Flow</div>
-          <ol className="flex flex-grow list-disc flex-col gap-4 px-4 py-2">
+        <aside className="flex w-[220px] shrink-0 flex-col border-r bg-[rgba(0,0,0,0.02)]">
+          <div className="shrink-0 px-4 py-4 font-medium">Flow</div>
+          <ol className="flex grow list-disc flex-col gap-4 px-4 py-2">
             {steps.map((step) => (
               <li
                 key={step.id}
@@ -52,7 +64,7 @@ export function WorkflowProgressView({
             ))}
           </ol>
         </aside>
-        <main className="flex-grow overflow-auto bg-white p-4">
+        <main className="grow overflow-auto bg-white p-4" ref={mainRef}>
           <ul className="flex flex-col gap-4">
             {steps.map((step, stepIndex) => (
               <li key={step.id} className="flex flex-col gap-2">
@@ -91,7 +103,7 @@ export function WorkflowProgressView({
                       ),
                     )}
                 </ul>
-                {stepIndex < steps.length - 1 && <hr className="mb-4 mt-8" />}
+                {stepIndex < steps.length - 1 && <hr className="mt-8 mb-4" />}
               </li>
             ))}
           </ul>
@@ -99,7 +111,7 @@ export function WorkflowProgressView({
       </div>
       {reportStep && (
         <div className="flex flex-col gap-4 p-4">
-          <Markdown enableCopy>
+          <Markdown enableCopy={workflow.isCompleted}>
             {reportStep.tasks[0]?.type === "thinking"
               ? reportStep.tasks[0].payload.text
               : ""}
@@ -111,6 +123,8 @@ export function WorkflowProgressView({
 }
 
 function PlanTaskView({ task }: { task: ThinkingTask }) {
+  const [isThinkingCollapsed, setIsThinkingCollapsed] = useState(false);
+
   const plan = useMemo<{
     title?: string;
     steps?: { title?: string; description?: string }[];
@@ -131,33 +145,45 @@ function PlanTaskView({ task }: { task: ThinkingTask }) {
     }
     return {};
   }, [task]);
-  const [showReason, setShowReason] = useState(true);
   const reason = task.payload.reason;
   const markdown = `## ${plan.title ?? ""}\n\n${plan.steps?.map((step) => `- **${step.title ?? ""}**\n\n${step.description ?? ""}`).join("\n\n") ?? ""}`;
+
+  useOnStateChangeEffect(
+    // TODO: switch to thinking state
+    task.state,
+    {
+      from: "pending",
+      to: "success",
+    },
+    () => {
+      setIsThinkingCollapsed(true);
+    },
+  );
+
   return (
     <li key={task.id} className="flex flex-col">
       {reason && (
-        <div>
-          <div>
-            <button
-              className="mb-1 flex h-8 items-center gap-2 rounded-2xl border bg-button px-4 text-sm text-button hover:bg-button-hover hover:text-button-hover"
-              onClick={() => setShowReason(!showReason)}
-            >
+        <Accordion
+          type="single"
+          collapsible
+          className="mb-2"
+          value={isThinkingCollapsed ? "" : "deep-thought"}
+          onValueChange={(value) => {
+            setIsThinkingCollapsed(value === "");
+          }}
+        >
+          <AccordionItem value="deep-thought" className="border-none">
+            <AccordionTrigger className="flex w-fit flex-none items-center gap-2 rounded-2xl border px-3 py-1 text-sm hover:no-underline [&[data-state=open]>svg]:rotate-180">
               <Atom className="h-4 w-4" />
               <span>Deep Thought</span>
-              {showReason ? (
-                <UpOutlined className="text-xs" />
-              ) : (
-                <DownOutlined className="text-xs" />
-              )}
-            </button>
-          </div>
-          <div className={cn(showReason ? "block" : "hidden")}>
-            <Markdown className="border-l-2 pl-6 text-sm opacity-70">
-              {reason}
-            </Markdown>
-          </div>
-        </div>
+            </AccordionTrigger>
+            <AccordionContent>
+              <Markdown className="border-l-2 pt-2 pl-6 text-sm opacity-70">
+                {reason}
+              </Markdown>
+            </AccordionContent>
+          </AccordionItem>
+        </Accordion>
       )}
       <div>
         <Markdown className="pl-6">{markdown ?? ""}</Markdown>

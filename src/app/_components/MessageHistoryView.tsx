@@ -31,8 +31,8 @@ function MessageView({ message }: { message: Message }) {
       <div className={cn("flex", message.role === "user" && "justify-end")}>
         <div
           className={cn(
-            "relative mb-8 w-fit max-w-[560px] rounded-2xl px-4 py-3 shadow-sm",
-            message.role === "user" && "rounded-ee-none bg-primary text-white",
+            "relative mb-8 w-fit max-w-[560px] rounded-2xl px-4 py-3 shadow-xs",
+            message.role === "user" && "bg-primary rounded-ee-none text-white",
             message.role === "assistant" && "rounded-es-none bg-white",
           )}
         >
@@ -53,7 +53,7 @@ function MessageView({ message }: { message: Message }) {
   } else if (message.type === "workflow") {
     return (
       <WorkflowProgressView
-        className="mb-8 max-h-[400px] min-h-[400px] min-w-[928px] max-w-[928px]"
+        className="mb-8 max-h-[400px] min-h-[400px] max-w-[928px] min-w-[928px]"
         workflow={message.content.workflow}
       />
     );

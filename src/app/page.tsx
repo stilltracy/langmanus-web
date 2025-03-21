@@ -3,6 +3,8 @@
 import { nanoid } from "nanoid";
 import { useCallback, useRef } from "react";
 
+import { useAutoScrollToBottom } from "~/components/hooks/useAutoScrollToBottom";
+import { ScrollArea } from "~/components/ui/scroll-area";
 import { sendMessage, useStore } from "~/core/store";
 import { cn } from "~/core/utils";
 
@@ -11,9 +13,12 @@ import { InputBox } from "./_components/InputBox";
 import { MessageHistoryView } from "./_components/MessageHistoryView";
 
 export default function HomePage() {
+  const scrollAreaRef = useRef<HTMLDivElement>(null);
   const abortControllerRef = useRef<AbortController | null>(null);
+
   const messages = useStore((state) => state.messages);
   const responding = useStore((state) => state.responding);
+
   const handleSendMessage = useCallback(
     async (
       content: string,
@@ -35,15 +40,18 @@ export default function HomePage() {
     },
     [],
   );
+
+  useAutoScrollToBottom(scrollAreaRef, responding);
+
   return (
-    <div className="flex w-full flex-col items-center justify-center">
-      <div className="flex min-h-screen min-w-page flex-col items-center">
-        <header className="fixed left-0 right-0 top-0 flex h-16 w-full items-center px-4">
+    <ScrollArea className="h-screen w-full" ref={scrollAreaRef}>
+      <div className="flex min-h-screen flex-col items-center">
+        <header className="sticky top-0 right-0 left-0 z-10 flex h-16 w-full items-center px-4 backdrop-blur-sm">
           <AppHeader />
         </header>
-        <main className="mb-48 mt-16 px-4">
+        <main className="w-full flex-1 px-4 pb-48">
           <MessageHistoryView
-            className="w-page"
+            className="w-page mx-auto"
             messages={messages}
             loading={responding}
           />
@@ -76,9 +84,9 @@ export default function HomePage() {
               }}
             />
           </div>
-          <div className="absolute bottom-[-32px] h-8 w-page backdrop-blur-sm" />
+          <div className="w-page absolute bottom-[-32px] h-8 backdrop-blur-xs" />
         </footer>
       </div>
-    </div>
+    </ScrollArea>
   );
 }

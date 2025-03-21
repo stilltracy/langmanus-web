@@ -123,7 +123,7 @@ function TravilySearchToolCallView({
                   href={result.url}
                 >
                   <img
-                    className="h-4 w-4 rounded-full bg-slate-100 shadow"
+                    className="h-4 w-4 rounded-full bg-slate-100 shadow-sm"
                     width={16}
                     height={16}
                     src={new URL(result.url).origin + "/favicon.ico"}

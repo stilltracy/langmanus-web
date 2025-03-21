@@ -9,7 +9,7 @@ const config = {
   webpack: (config) => {
     config.module.rules.push({
       test: /\.txt$/,
-      use: 'raw-loader'
+      use: "raw-loader",
     });
     return config;
   },
@@ -23,6 +23,8 @@ const config = {
       },
     },
   },
+  // ... rest of the configuration.
+  output: "standalone",
 };
 
 export default config;

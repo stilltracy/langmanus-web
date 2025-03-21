@@ -11,12 +11,11 @@ LangManus is a community-driven AI automation framework that builds upon the inc
 ## Demo Video
 
 - [View on YouTube](https://youtu.be/sZCHqrQBUGk)
-- [Download Video](https://github.com/langmanus/langmanus/blob/main/assets/demo.mp4)
 
 ## Table of Contents
 
 - [Quick Start](#quick-start)
-- [Docker](#Docker)
+- [Docker](#docker)
 - [Project Statement](#project-statement)
 - [Contributing](#contributing)
 - [License](#license)
@@ -66,7 +65,7 @@ Have fun!
 
 You can also run this project with Docker.
 
-First, you need read the [configuration](#configuration) below.Make sure `.env` file is ready.
+First, you need read the [configuration](#configuration) below. Make sure `.env` file is ready.
 
 Second, to build a Docker image of your own web server:
 

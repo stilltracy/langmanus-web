@@ -29,9 +29,9 @@ export function WorkflowProgressView({
   return (
     <div className="flex flex-col gap-4">
       <div className={cn("flex overflow-hidden rounded-2xl border", className)}>
-        <aside className="flex w-[220px] flex-shrink-0 flex-col border-r bg-[rgba(0,0,0,0.02)]">
-          <div className="flex-shrink-0 px-4 py-4 font-medium">Flow</div>
-          <ol className="flex flex-grow list-disc flex-col gap-4 px-4 py-2">
+        <aside className="flex w-[220px] shrink-0 flex-col border-r bg-[rgba(0,0,0,0.02)]">
+          <div className="shrink-0 px-4 py-4 font-medium">Flow</div>
+          <ol className="flex grow list-disc flex-col gap-4 px-4 py-2">
             {steps.map((step) => (
               <li
                 key={step.id}
@@ -52,7 +52,7 @@ export function WorkflowProgressView({
             ))}
           </ol>
         </aside>
-        <main className="flex-grow overflow-auto bg-white p-4">
+        <main className="grow overflow-auto bg-white p-4">
           <ul className="flex flex-col gap-4">
             {steps.map((step, stepIndex) => (
               <li key={step.id} className="flex flex-col gap-2">

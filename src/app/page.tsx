@@ -76,7 +76,7 @@ export default function HomePage() {
               }}
             />
           </div>
-          <div className="absolute bottom-[-32px] h-8 w-page backdrop-blur-sm" />
+          <div className="absolute bottom-[-32px] h-8 w-page backdrop-blur-xs" />
         </footer>
       </div>
     </div>

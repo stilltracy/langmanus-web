@@ -31,7 +31,7 @@ function MessageView({ message }: { message: Message }) {
       <div className={cn("flex", message.role === "user" && "justify-end")}>
         <div
           className={cn(
-            "relative mb-8 w-fit max-w-[560px] rounded-2xl px-4 py-3 shadow-sm",
+            "relative mb-8 w-fit max-w-[560px] rounded-2xl px-4 py-3 shadow-xs",
             message.role === "user" && "rounded-ee-none bg-primary text-white",
             message.role === "assistant" && "rounded-es-none bg-white",
           )}

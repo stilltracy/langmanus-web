@@ -98,10 +98,10 @@ export function InputBox({
         />
       </div>
       <div className="flex items-center px-4 py-2">
-        <div className="flex flex-grow items-center gap-2">
+        <div className="flex grow items-center gap-2">
           <button
             className={cn(
-              "flex h-8 items-center gap-2 rounded-2xl border px-4 text-sm transition-shadow hover:shadow",
+              "flex h-8 items-center gap-2 rounded-2xl border px-4 text-sm transition-shadow hover:shadow-sm",
               deepThinkingMode
                 ? "border-primary bg-primary/15 text-primary"
                 : "text-button hover:bg-button-hover hover:text-button-hover",
@@ -115,7 +115,7 @@ export function InputBox({
           </button>
           <button
             className={cn(
-              "flex h-8 items-center rounded-2xl border px-4 text-sm transition-shadow hover:shadow",
+              "flex h-8 items-center rounded-2xl border px-4 text-sm transition-shadow hover:shadow-sm",
               searchBeforePlanning
                 ? "border-primary bg-primary/15 text-primary"
                 : "text-button hover:bg-button-hover hover:text-button-hover",
@@ -128,10 +128,10 @@ export function InputBox({
             <span>Search</span>
           </button>
         </div>
-        <div className="flex flex-shrink-0 items-center gap-2">
+        <div className="flex shrink-0 items-center gap-2">
           <button
             className={cn(
-              "h-10 w-10 rounded-full text-button transition-shadow hover:bg-button-hover hover:text-button-hover hover:shadow",
+              "h-10 w-10 rounded-full text-button transition-shadow hover:bg-button-hover hover:text-button-hover hover:shadow-sm",
               responding ? "bg-button-hover" : "bg-button",
             )}
             title={responding ? "Cancel" : "Send"}
@@ -139,7 +139,7 @@ export function InputBox({
           >
             {responding ? (
               <div className="flex h-10 w-10 items-center justify-center">
-                <div className="h-4 w-4 rounded bg-red-300" />
+                <div className="h-4 w-4 rounded-sm bg-red-300" />
               </div>
             ) : (
               <ArrowUpOutlined />

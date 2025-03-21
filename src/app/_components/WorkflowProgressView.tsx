@@ -99,7 +99,7 @@ export function WorkflowProgressView({
       </div>
       {reportStep && (
         <div className="flex flex-col gap-4 p-4">
-          <Markdown type="report">
+          <Markdown>
             {reportStep.tasks[0]?.type === "thinking"
               ? reportStep.tasks[0].payload.text
               : ""}
@@ -153,14 +153,14 @@ function PlanTaskView({ task }: { task: ThinkingTask }) {
             </button>
           </div>
           <div className={cn(showReason ? "block" : "hidden")}>
-            <Markdown className="border-l-2 pl-6 text-sm opacity-70" type="flow">
+            <Markdown className="border-l-2 pl-6 text-sm opacity-70">
               {reason}
             </Markdown>
           </div>
         </div>
       )}
       <div>
-        <Markdown className="pl-6" type="flow">{markdown ?? ""}</Markdown>
+        <Markdown className="pl-6">{markdown ?? ""}</Markdown>
       </div>
     </li>
   );

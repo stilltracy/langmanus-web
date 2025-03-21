@@ -6,6 +6,13 @@ import "./src/env.js";
 
 /** @type {import("next").NextConfig} */
 const config = {
+  webpack: (config) => {
+    config.module.rules.push({
+      test: /\.txt$/,
+      use: 'raw-loader'
+    });
+    return config;
+  },
   experimental: {
     turbo: {
       rules: {

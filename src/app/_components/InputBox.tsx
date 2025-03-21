@@ -1,6 +1,7 @@
 import { ArrowUpOutlined, GlobalOutlined } from "@ant-design/icons";
 import { type KeyboardEvent, useCallback, useEffect, useState } from "react";
 
+import { Button } from "~/components/ui/button";
 import { Atom } from "~/core/icons";
 import { cn } from "~/core/utils";
 
@@ -99,9 +100,10 @@ export function InputBox({
       </div>
       <div className="flex items-center px-4 py-2">
         <div className="flex grow items-center gap-2">
-          <button
+          <Button
+            variant="outline"
             className={cn(
-              "flex h-8 items-center gap-2 rounded-2xl border px-4 text-sm transition-shadow hover:shadow-sm",
+              "rounded-2xl px-4 text-sm",
               deepThinkingMode
                 ? "border-primary bg-primary/15 text-primary"
                 : "text-button hover:bg-button-hover hover:text-button-hover",
@@ -112,10 +114,11 @@ export function InputBox({
           >
             <Atom className="h-4 w-4" />
             <span>Deep Think</span>
-          </button>
-          <button
+          </Button>
+          <Button
+            variant="outline"
             className={cn(
-              "flex h-8 items-center rounded-2xl border px-4 text-sm transition-shadow hover:shadow-sm",
+              "rounded-2xl px-4 text-sm",
               searchBeforePlanning
                 ? "border-primary bg-primary/15 text-primary"
                 : "text-button hover:bg-button-hover hover:text-button-hover",
@@ -124,14 +127,16 @@ export function InputBox({
               setSearchBeforePlanning(!searchBeforePlanning);
             }}
           >
-            <GlobalOutlined className="h-6 w-6" />
+            <GlobalOutlined className="h-4 w-4" />
             <span>Search</span>
-          </button>
+          </Button>
         </div>
         <div className="flex shrink-0 items-center gap-2">
-          <button
+          <Button
+            variant="outline"
+            size="icon"
             className={cn(
-              "h-10 w-10 rounded-full text-button transition-shadow hover:bg-button-hover hover:text-button-hover hover:shadow-sm",
+              "h-10 w-10 rounded-full",
               responding ? "bg-button-hover" : "bg-button",
             )}
             title={responding ? "Cancel" : "Send"}
@@ -144,7 +149,7 @@ export function InputBox({
             ) : (
               <ArrowUpOutlined />
             )}
-          </button>
+          </Button>
         </div>
       </div>
     </div>

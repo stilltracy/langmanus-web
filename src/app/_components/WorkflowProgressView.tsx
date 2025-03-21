@@ -2,12 +2,13 @@ import { DownOutlined, UpOutlined } from "@ant-design/icons";
 import { parse } from "best-effort-json-parser";
 import { useMemo, useState } from "react";
 
+import { Button } from "~/components/ui/button";
 import { Atom } from "~/core/icons";
 import { cn } from "~/core/utils";
 import {
-  type WorkflowStep,
-  type Workflow,
   type ThinkingTask,
+  type Workflow,
+  type WorkflowStep,
 } from "~/core/workflow";
 
 import { Markdown } from "./Markdown";
@@ -91,7 +92,7 @@ export function WorkflowProgressView({
                       ),
                     )}
                 </ul>
-                {stepIndex < steps.length - 1 && <hr className="mb-4 mt-8" />}
+                {stepIndex < steps.length - 1 && <hr className="mt-8 mb-4" />}
               </li>
             ))}
           </ul>
@@ -139,8 +140,10 @@ function PlanTaskView({ task }: { task: ThinkingTask }) {
       {reason && (
         <div>
           <div>
-            <button
-              className="mb-1 flex h-8 items-center gap-2 rounded-2xl border bg-button px-4 text-sm text-button hover:bg-button-hover hover:text-button-hover"
+            <Button
+              variant="outline"
+              size="sm"
+              className="mb-1 flex gap-2 rounded-2xl"
               onClick={() => setShowReason(!showReason)}
             >
               <Atom className="h-4 w-4" />
@@ -150,7 +153,7 @@ function PlanTaskView({ task }: { task: ThinkingTask }) {
               ) : (
                 <DownOutlined className="text-xs" />
               )}
-            </button>
+            </Button>
           </div>
           <div className={cn(showReason ? "block" : "hidden")}>
             <Markdown className="border-l-2 pl-6 text-sm opacity-70">

@@ -1,11 +1,11 @@
-import { type Message } from "../messaging";
-import { timeout } from "../utils";
+import { type Message } from "../../messaging";
+import { timeout } from "../../utils";
+import { type ChatEvent } from "../types";
 
-import mock from "./mock-3.txt";
-import { type ChatEvent } from "./types";
+import mock from "./mock.txt";
 
 export async function* chatStream(
-  _userMessage: Message, 
+  _userMessage: Message,
 ): AsyncIterable<ChatEvent> {
   for (const chunk of mock.split("\n\n")) {
     const lines = chunk.split("\n");
